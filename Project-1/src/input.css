@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: "Barlow Semi Condensed", sans-serif;
+	}
+	h2 {
+		line-height: normal;
+	}
+}
