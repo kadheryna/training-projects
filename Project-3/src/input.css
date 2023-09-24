@@ -18,3 +18,13 @@
 		display: none;
 	}
 }
+
+@layer components {
+	.correctInput {
+		@apply border border-lightGrey rounded-md focus:outline-none focus:border-lightPurple;
+	}
+
+	.invalidInput {
+		@apply border border-warningRed rounded-md focus:outline-none focus:border-warningRed;
+	}
+}
