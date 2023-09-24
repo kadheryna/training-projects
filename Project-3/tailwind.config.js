@@ -5,11 +5,9 @@ module.exports = {
 		letterSpacing: {
 			widest: "0.2em",
 		},
-
 		extend: {
 			fontSize: {
 				xxs: "0.5em",
-				
 			},
 			fontWeight: {
 				regular: "400",
