@@ -10,10 +10,15 @@ const inputYear = document.getElementById("year");
 const labelForYear = document.querySelector(`label[for="${inputYear.id}"]`);
 const warningYear = document.getElementById("warningYear");
 
-const calculatedDay = document.getElementsByClassName("calculatedDay");
-const calculatedMonth = document.getElementsByClassName("calculatedMonth");
-const calculatedYear = document.getElementsByClassName("calculatedYear");
+const resultDays = document.getElementById("resultDays");
+const resultMonths = document.getElementById("resultMonths");
+const resultYears = document.getElementById("resultYears");
 const calculate = document.getElementById("calculate");
+
+let date = new Date();
+let currentDay = date.getDate();
+let currentMonth = date.getMonth() + 1;
+let currentYear = date.getFullYear();
 
 function checkDay() {
 	const day = Number(inputDay.value);
@@ -45,11 +50,10 @@ function checkDay() {
 	}
 
 	if (!isValidDay) {
-		warningDay.innerHTML = "Must be a valid day";
+		warningDay.innerText = "Must be a valid day";
 		warningDay.classList.remove("invisible");
 		inputDay.classList.add("invalidInput");
 		labelForDay.classList.add("text-warningRed");
-		return;
 	} else {
 		warningDay.classList.add("invisible");
 		inputDay.classList.remove("invalidInput");
@@ -60,12 +64,11 @@ function checkDay() {
 
 function checkMonth() {
 	const month = Number(inputMonth.value);
-	if (month < 1 || month > 13) {
-		warningMonth.innerHTML = "Must be a valid month";
+	if (month < 1 || month >= 13) {
+		warningMonth.innerText = "Must be a valid month";
 		warningMonth.classList.remove("invisible");
 		inputMonth.classList.add("invalidInput");
 		labelForMonth.classList.add("text-warningRed");
-		return;
 	} else {
 		warningMonth.classList.add("invisible");
 		inputMonth.classList.remove("invalidInput");
@@ -75,13 +78,18 @@ function checkMonth() {
 }
 
 function checkYear() {
-	let year = Number(inputYear.value);
-	if (year < 1936 || year > 2023) {
-		warningYear.innerHTML = "Must be a valid year";
+	const year = Number(inputYear.value);
+
+	if (year < 1936 && year < currentYear) {
+		warningYear.innerText = "Must be a valid year";
 		warningYear.classList.remove("invisible");
 		inputYear.classList.add("invalidInput");
 		labelForYear.classList.add("text-warningRed");
-		return;
+	} else if (year > currentYear) {
+		warningYear.innerText = "Must be in the past";
+		warningYear.classList.remove("invisible");
+		inputYear.classList.add("invalidInput");
+		labelForYear.classList.add("text-warningRed");
 	} else {
 		warningYear.classList.add("invisible");
 		inputYear.classList.remove("invalidInput");
@@ -91,12 +99,88 @@ function checkYear() {
 }
 
 function calculateAge() {
-	checkDay();
-	checkMonth();
-	checkYear();
+	let userDay = Number(inputDay.value);
+	let userMonth = Number(inputMonth.value);
+	let userYear = Number(inputYear.value);
+	let userDate = new Date(`${userYear}-${userMonth}-${userDay}`);
+
+	let differenceMs = date - userDate;
+
+	let milForDay = 24 * 60 * 60 * 1000;
+	let milForMonth = milForDay * 30.44;
+	let milForYear = milForDay * 365.25;
+
+	let years = Math.floor(differenceMs / milForYear);
+	differenceMs %= milForYear;
+
+	let months = Math.floor(differenceMs / milForMonth);
+	differenceMs %= milForMonth;
+
+	let days = Math.floor(differenceMs / milForDay);
+
+	animateNumbers(years, months, days);
+}
+
+function animateNumbers(targetYears, targetMonths, targetDays) {
+	let currentYear = 0;
+	let currentMonth = 0;
+	let currentDay = 0;
+
+	const interval = 50;
+	const stepYear = Math.ceil(targetYears / (1000 / interval));
+	const stepMonth = Math.ceil(targetMonths / (1000 / interval));
+	const stepDay = Math.ceil(targetDays / (1000 / interval));
+
+	const yearInterval = setInterval(() => {
+		currentYear += stepYear;
+		if (currentYear >= targetYears) {
+			currentYear = targetYears;
+			clearInterval(yearInterval);
+		}
+		resultYears.innerHTML = currentYear;
+	}, interval);
+
+	const monthInterval = setInterval(() => {
+		currentMonth += stepMonth;
+		if (currentMonth >= targetMonths) {
+			currentMonth = targetMonths;
+			clearInterval(monthInterval);
+		}
+		resultMonths.innerHTML = currentMonth;
+	}, interval);
+
+	const dayInterval = setInterval(() => {
+		currentDay += stepDay;
+		if (currentDay >= targetDays) {
+			currentDay = targetDays;
+			clearInterval(dayInterval);
+		}
+		resultDays.innerHTML = currentDay;
+	}, interval);
+}
+
+function calculateButton() {
+	let validDay = checkDay();
+	let validMonth = checkMonth();
+	let validYear = checkYear();
+	let errorMessage = "";
+
+	if (!validDay && !validMonth && !validYear) {
+		errorMessage = "This field is required";
+		warningDay.innerText = errorMessage;
+		warningMonth.innerText = errorMessage;
+		warningYear.innerText = errorMessage;
+	} else if (!validDay || !validMonth || !validYear) {
+		errorMessage = "Must be a valid date";
+		warningDay.innerText = errorMessage;
+		warningMonth.innerText = errorMessage;
+		warningYear.innerText = errorMessage;
+	} else if (validDay && validMonth && validYear) {
+		calculateAge();
+	}
 }
 
 inputDay.addEventListener("input", checkDay);
 inputMonth.addEventListener("input", checkMonth);
 inputYear.addEventListener("input", checkYear);
-calculate.addEventListener("click", calculateAge);
+calculate.addEventListener("click", calculateButton);
