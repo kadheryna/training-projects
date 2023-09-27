@@ -713,16 +713,8 @@ input::-webkit-inner-spin-button {
   border-radius: 9999px;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-br-4xl {
   border-bottom-right-radius: 5em;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .bg-lightGrey {
@@ -776,11 +768,6 @@ input::-webkit-inner-spin-button {
   line-height: 2.5rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -827,16 +814,6 @@ input::-webkit-inner-spin-button {
 .text-warningRed {
   --tw-text-opacity: 1;
   color: hsl(0 100% 67% / var(--tw-text-opacity));
-}
-
-.focus\:border-lightPurple:focus {
-  --tw-border-opacity: 1;
-  border-color: hsl(259 100% 65% / var(--tw-border-opacity));
-}
-
-.focus\:outline-none:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
 }
 
 .active\:bg-offBlack:active {
