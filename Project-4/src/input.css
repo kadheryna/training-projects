@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		font-family: "Space Grotesk", sans-serif;
+		color: hsl(278, 68%, 11%);
+	}
+
+	input {
+		cursor: pointer;
+	}
+	input::-webkit-inner-spin-button {
+		display: none;
+	}
+}
+
+@layer components {
+	.correctInput {
+		@apply border border-grayishViolet rounded-md focus:outline-none focus:border-mediumViolet p-2 mt-1 indent-2 text-darkGrayishViolet text-lg w-full;
+	}
+
+	.cardBack {
+		@apply flex justify-end text-white tracking-widest bg-cover bg-no-repeat rounded-md shadow-2xl w-[19rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] px-4 py-10 absolute top-16 left-10 md:left-16 md:top-96 lg:left-52;
+	}
+
+	.cardFront {
+		@apply flex flex-col justify-between text-white rounded-md tracking-widest bg-cover bg-no-repeat p-5 lg:p-7 w-[18rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] shadow-2xl absolute z-10 top-40 left-5 md:left-14 md:top-32 lg:left-36;
+	}
+}
