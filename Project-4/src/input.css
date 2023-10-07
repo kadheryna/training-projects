@@ -21,6 +21,10 @@
 		@apply border border-grayishViolet rounded-md focus:outline-none focus:border-mediumViolet p-2 mt-1 indent-2 text-darkGrayishViolet text-lg w-full;
 	}
 
+	.invalidInput {
+		@apply border border-warningRed rounded-md focus:outline-none focus:border-warningRed;
+	}
+
 	.cardBack {
 		@apply flex justify-end text-white tracking-widest bg-cover bg-no-repeat rounded-md shadow-2xl w-[19rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] px-4 py-10 absolute top-16 left-10 md:left-16 md:top-96 lg:left-52;
 	}

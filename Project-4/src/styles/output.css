@@ -569,6 +569,20 @@ input::-webkit-inner-spin-button {
   outline-offset: 2px;
 }
 
+.invalidInput {
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 66% / var(--tw-border-opacity));
+}
+
+.invalidInput:focus {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 66% / var(--tw-border-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .cardBack {
   position: absolute;
   top: 4rem;
@@ -651,6 +665,10 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .absolute {
   position: absolute;
 }
@@ -665,6 +683,26 @@ input::-webkit-inner-spin-button {
 
 .top-20 {
   top: 5rem;
+}
+
+.top-\[4\.5em\] {
+  top: 4.5em;
+}
+
+.top-\[4\.5rem\] {
+  top: 4.5rem;
+}
+
+.top-\[4em\] {
+  top: 4em;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-24 {
+  top: 6rem;
 }
 
 .mb-5 {
@@ -695,10 +733,6 @@ input::-webkit-inner-spin-button {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -726,6 +760,10 @@ input::-webkit-inner-spin-button {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[1400px\] {
@@ -870,6 +908,30 @@ input::-webkit-inner-spin-button {
 @media (min-width: 1024px) {
   .lg\:top-24 {
     top: 6rem;
+  }
+
+  .lg\:top-2 {
+    top: 0.5rem;
+  }
+
+  .lg\:top-20 {
+    top: 5rem;
+  }
+
+  .lg\:top-\[5\.5rem\] {
+    top: 5.5rem;
+  }
+
+  .lg\:top-\[5\.25rem\] {
+    top: 5.25rem;
+  }
+
+  .lg\:top-\[5\.75rem\] {
+    top: 5.75rem;
+  }
+
+  .lg\:top-\[5\.65rem\] {
+    top: 5.65rem;
   }
 
   .lg\:w-\[40\%\] {
