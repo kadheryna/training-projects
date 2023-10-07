@@ -22,10 +22,10 @@
 		<title>Project-4 || Frontend Mentor interactive card details form</title>
 	</head>
 	<body>
-		<div
+		<main
 			class="h-full w-[100vw] flex flex-col place-items-center justify-start gap-[25%] md:flex-row max-w-[1400px]"
 		>
-			<div class="relative flex flex-col md:w-[35vw]">
+			<section class="relative flex flex-col md:w-[35vw]">
 				<img
 					src="./styles/images/bg-main-mobile.png"
 					alt="bg-mobile"
@@ -40,12 +40,12 @@
 						<div>
 							<img src="./styles/images/card-logo.svg" alt="cart-logo" class="h-8"/>
 						</div>
-						<p class="text-lg lg:text-2xl tracking-widest">
+						<p id="cardNumber" class="text-lg lg:text-2xl tracking-widest ">
 							1234 5678 9123 0000
 						</p>
 						<div class="flex flex-row justify-between text-base">
-							<p class="text-xs uppercase">Jane Appleseed</p>
-							<p class="text-xs">00/00</p>
+							<p id="cardholderName" class="text-xs uppercase">Jane Appleseed</p>
+							<span class="flex flex-row text-xs"><p id="cardMonth" >00</p>/<p id="cardYear">00</p></span>
 						</div>
 					</div>
 					<div class="flex flex-col place-items-center justify-center">
@@ -53,16 +53,16 @@
 							class="cardBack"
 							style="background-image: url(./styles/images/bg-card-back.png)"
 						>
-							<p
-								class="text-white w-fit text-xs lg:text-base absolute top-20 right-8 lg:top-24"
+							<p id="cardCVC"
+								class="text-white w-fit text-xs lg:text-base absolute top-20 right-8 lg:top-[5.65rem]"
 							>
 								000
 							</p>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div
+			</section>
+			<section
 				class="flex flex-col gap-6 mt-16 mb-5 w-[90%] md:w-[70%] lg:w-[40%] md:p-12"
 			>
 				<div class="flex flex-col">
@@ -74,9 +74,7 @@
 						placeholder="e.g. Jane Appleseed"
 						class="correctInput"
 					/>
-					<p class="wrongName hidden text-xs mt-2 text-warningRed">
-						Wrong format, letters only
-					</p>
+					<p id="wrongName"class="invisible text-xs mt-2 text-warningRed"></p>
 				</div>
 				<div class="flex flex-col">
 					<label for="inputNumber" class="text-sm">CARD NUMBER</label>
@@ -85,11 +83,9 @@
 						id="inputNumber"
 						name="inputNumber"
 						placeholder="e.g. 1234 5678 9123 0000"
-						class="correctInput"
+						class="correctInput gap-2"
 					/>
-					<p class="wrongNumbers hidden text-xs mt-2 text-warningRed">
-						Wrong format, numbers only
-					</p>
+					<p id="wrongNumber" class=" invisible text-xs mt-2 text-warningRed"></p>
 				</div>
 				<div class="flex gap-3">
 					<div class="flex flex-col">
@@ -100,6 +96,7 @@
 								id="month"
 								name="expireDates"
 								placeholder="MM"
+								maxlength="2"
 								class="correctInput"
 							/>
 							<input
@@ -107,12 +104,12 @@
 								id="year"
 								name="expireDates"
 								placeholder="YY"
+								maxlength="2"
+
 								class="correctInput"
 							/>
 						</div>
-						<p class="wrongDates hidden text-xs mt-2 text-warningRed">
-							Can't be blank
-						</p>
+						<p id="wrongDate" class="invisible text-xs mt-2 text-warningRed"></p>
 					</div>
 					<div class="flex flex-col w-[100%]">
 						<label for="cvc" class="text-sm w-fit">CVC</label>
@@ -121,16 +118,16 @@
 							id="cvc"
 							name="cvc"
 							placeholder="e.g. 123"
+							maxlength="3"
 							class="correctInput"
 						/>
-						<p class="wrongCode hidden text-xs mt-2 text-warningRed">
-							Can't be blank
-						</p>
+						<p id="wrongCode" class="invisible text-xs mt-2 text-warningRed"></p>
 					</div>
 				</div>
 
 				<button
 					type="button"
+					id="confirmButton"
 					class="mt-3 text-grayishViolet p-4 rounded-md bg-darkViolet hover:bg-mediumViolet"
 				>
 					Confirm
@@ -144,7 +141,8 @@
 						>. Coded by Kadheryna</a>.
 					</p>
 				</div>
-			</div>
-		</div>
+			</section>
+		</main>
+		<script src="./app.js"></script>
 	</body>
 </html>
