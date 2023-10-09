@@ -32,7 +32,7 @@ function checkCardNumber() {
 		errorMessage = "Can't be blank";
 	} else if (!cardNumberExpression.test(cardNumberValue)) {
 		errorMessage = containsNonDigits
-			? "Wrong format, letters only"
+			? "Wrong format, numbers only"
 			: "Must be 16 digits";
 	} else {
 		formattedCardNumber = cardNumberValue.match(/.{1,4}/g).join(" ");
