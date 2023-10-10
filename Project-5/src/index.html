@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./styles/images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles/output.css" />
+		<title>Frontend Mentor | Time tracking dashboard</title>
+	</head>
+	<body
+		class="h-screen flex flex-col place-items-center justify-evenly bg-bgBody"
+	>
+		<main
+			class="max-w-[1200px] h-screen mt-14 lg:h-[70vh] lg:place-content-center grid gap-7 grid-cols-1 grid-rows-7 w-[85vw] lg:grid-cols-4 lg:grid-rows-2"
+		>
+			<section
+				class="lg:row-span-2 bg-darkBlue rounded-2xl flex flex-col lg:w-64"
+			>
+				<div
+					class="bg-bgPerson rounded-2xl flex place-items-center lg:place-items-start lg:flex-col p-10 lg:px-8 lg:pt-8 lg:pb-14"
+				>
+					<img
+						src="./styles/images/image-jeremy.png"
+						alt="Jeremy"
+						class="h-20 lg:w-20 border-white border-2 rounded-full mr-6"
+					/>
+					<div class="lg:my-8">
+						<h3 class="font-normal text-lg lg:text-base lg:mb-2 text-paleBlue">
+							Report for
+						</h3>
+						<h1 class="text-3xl lg:text-4xl font-light">Jeremy Robson</h1>
+					</div>
+				</div>
+				<div
+					class="flex flex-row text-xl lg:text-lg lg:flex-col justify-around py-7 lg:px-8 lg:py-10 text-paleBlue"
+				>
+					<p class="font-normal">Daily</p>
+					<p class="font-normal lg:my-5">Weekly</p>
+					<p class="font-normal">Monthly</p>
+				</div>
+			</section>
+			<!-- WORK SECTION -->
+			<section
+				class="bg-work bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedWork rounded-2xl h-48 lg:h-full"
+			>
+				<div
+					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+				>
+					<div
+						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+					>
+						<h3 class="font-semibold text-2xl">Work</h3>
+						<img
+							src="./styles/images/icon-ellipsis.svg"
+							alt="ellipsis"
+							class="h-2 lg:h-1"
+						/>
+					</div>
+					<div
+						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+					>
+						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">32hrs</h1>
+						<p class="text-paleBlue text-lg lg:text-base">Last week - 36hrs</p>
+					</div>
+				</div>
+			</section>
+			<!-- PLAY SECTION -->
+			<section
+				class="bg-play bg-no-repeat bg-right-top flex flex-col justify-end bg-softBlue rounded-2xl h-48 lg:h-full"
+			>
+				<div
+					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+				>
+					<div
+						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+					>
+						<h3 class="font-semibold text-2xl">Play</h3>
+						<img
+							src="./styles/images/icon-ellipsis.svg"
+							alt="ellipsis"
+							class="h-2 lg:h-1"
+						/>
+					</div>
+					<div
+						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+					>
+						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">10hrs</h1>
+						<p class="text-paleBlue text-lg lg:text-base">Last week - 8hrs</p>
+					</div>
+				</div>
+			</section>
+			<!-- STUDY SECTION -->
+			<section
+				class="bg-study bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedStudy rounded-2xl h-48 lg:h-full"
+			>
+				<div
+					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+				>
+					<div
+						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+					>
+						<h3 class="font-semibold text-2xl">Study</h3>
+						<img
+							src="./styles/images/icon-ellipsis.svg"
+							alt="ellipsis"
+							class="h-2 lg:h-1"
+						/>
+					</div>
+					<div
+						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+					>
+						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">4hrs</h1>
+						<p class="text-paleBlue text-lg lg:text-base">Last week - 7hr</p>
+					</div>
+				</div>
+			</section>
+			<!-- EXERCISE SECTION -->
+			<section
+				class="bg-exercise bg-no-repeat bg-right-top flex flex-col justify-end bg-limeGreen rounded-2xl h-48 lg:h-full"
+			>
+				<div
+					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+				>
+					<div
+						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+					>
+						<h3 class="font-semibold text-2xl">Exercise</h3>
+						<img
+							src="./styles/images/icon-ellipsis.svg"
+							alt="ellipsis"
+							class="h-2 lg:h-1"
+						/>
+					</div>
+					<div
+						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+					>
+						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">4hrs</h1>
+						<p class="text-paleBlue text-lg lg:text-base">Last week - 5hrs</p>
+					</div>
+				</div>
+			</section>
+			<!-- SOCIAL SECTION -->
+			<section
+				class="bg-social bg-no-repeat bg-right-top flex flex-col justify-end bg-violet rounded-2xl h-48 lg:h-full"
+			>
+				<div
+					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+				>
+					<div
+						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+					>
+						<h3 class="font-semibold text-2xl">Social</h3>
+						<img
+							src="./styles/images/icon-ellipsis.svg"
+							alt="ellipsis"
+							class="h-2 lg:h-1"
+						/>
+					</div>
+					<div
+						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+					>
+						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">5hrs</h1>
+						<p class="text-paleBlue text-lg lg:text-base">Last week - 10hrs</p>
+					</div>
+				</div>
+			</section>
+			<!-- SELF CARE SECTION -->
+			<section
+				class="bg-selfCare bg-no-repeat bg-right-top flex flex-col justify-end bg-softOrange rounded-2xl h-48 lg:h-full"
+			>
+				<div
+					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+				>
+					<div
+						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+					>
+						<h3 class="font-semibold text-2xl">Work</h3>
+						<img
+							src="./styles/images/icon-ellipsis.svg"
+							alt="ellipsis"
+							class="h-2 lg:h-1"
+						/>
+					</div>
+					<div
+						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+					>
+						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">2hrs</h1>
+						<p class="text-paleBlue text-lg lg:text-base">Last week - 2hrs</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- <div class="text-sm text-paleBlue">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+			Coded by Kadheryna.
+		</div> -->
+	</body>
+</html>
