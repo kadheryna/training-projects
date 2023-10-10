@@ -3,6 +3,11 @@ module.exports = {
 	content: ["./src/**/*.{html,js}"],
 	theme: {
 		extend: {
+			backgroundImage: {
+				cardBack: "url('./images/bg-card-back.png')",
+				cardFront: "url('./images/bg-card-front.png')",
+				bgMain: "url('./images/bg-main-mobile.png')",
+			},
 			colors: {
 				grayishViolet: "hsl(270, 3%, 87%)",
 				darkGrayishViolet: "hsl(279, 6%, 55%)",

@@ -815,6 +815,42 @@ input::-webkit-inner-spin-button {
   background-color: hsl(278 68% 11% / var(--tw-bg-opacity));
 }
 
+.bg-cardBack {
+  background-image: url('./images/bg-card-back.png');
+}
+
+.bg-cardFront {
+  background-image: url('./images/bg-card-front.png');
+}
+
+.bg-bgMain {
+  background-image: url('./images/bg-main-mobile.png');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-left {
+  background-position: left;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
 .p-4 {
   padding: 1rem;
 }
