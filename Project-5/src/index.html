@@ -20,189 +20,226 @@
 		<title>Frontend Mentor | Time tracking dashboard</title>
 	</head>
 	<body
-		class="h-screen flex flex-col place-items-center justify-evenly bg-bgBody"
+		class="h-screen flex flex-col place-items-center justify-center bg-bgBody"
 	>
 		<main
-			class="max-w-[1200px] h-screen mt-14 lg:h-[70vh] lg:place-content-center grid gap-7 grid-cols-1 grid-rows-7 w-[85vw] lg:grid-cols-4 lg:grid-rows-2"
+			class="h-full lg:max-w-[1200px] grid grid-cols-1 grid-rows-7 md:grid-cols-4 md:grid-rows-2 gap-7 md:gap-4 lg:gap-8 md:h-[490px] lg:h-[540px] max-w-[90vw] md:w-[95vw] mt-14"
 		>
-			<section
-				class="lg:row-span-2 bg-darkBlue rounded-2xl flex flex-col lg:w-64"
-			>
+			<section class="md:row-span-2 bg-darkBlue rounded-2xl flex flex-col">
 				<div
-					class="bg-bgPerson rounded-2xl flex place-items-center lg:place-items-start lg:flex-col p-10 lg:px-8 lg:pt-8 lg:pb-14"
+					class="bg-bgPerson rounded-2xl flex place-items-center md:place-items-start md:flex-col p-8 md:p-8 md:pb-10"
 				>
 					<img
 						src="./styles/images/image-jeremy.png"
 						alt="Jeremy"
-						class="h-20 lg:w-20 border-white border-2 rounded-full mr-6"
+						class="h-16 lg:h-20 border-white border-2 rounded-full mr-6"
 					/>
-					<div class="lg:my-8">
-						<h3 class="font-normal text-lg lg:text-base lg:mb-2 text-paleBlue">
+					<div class="md:my-8">
+						<h3 class="font-normal text-sm md:text-base md:mb-2 text-paleBlue">
 							Report for
 						</h3>
-						<h1 class="text-3xl lg:text-4xl font-light">Jeremy Robson</h1>
+						<h1 class="text-2xl lg:text-4xl font-light">Jeremy Robson</h1>
 					</div>
 				</div>
 				<div
-					class="flex flex-row text-xl lg:text-lg lg:flex-col justify-around py-7 lg:px-8 lg:py-10 text-paleBlue"
+					class="flex flex-row text-lg md:flex-col justify-around py-7 md:pl-8 md:pt-12 text-pastelBlue"
 				>
-					<p class="font-normal">Daily</p>
-					<p class="font-normal lg:my-5">Weekly</p>
-					<p class="font-normal">Monthly</p>
+					<button
+						type="button"
+						class="font-light w-fit hover:text-paleBlue active:text-white"
+					>
+						Daily
+					</button>
+					<button
+						type="button"
+						class="font-light md:my-5 w-fit hover:text-paleBlue active:text-white"
+					>
+						Weekly
+					</button>
+					<button
+						type="button"
+						class="font-light w-fit hover:text-paleBlue active:text-white"
+					>
+						Monthly
+					</button>
 				</div>
 			</section>
 			<!-- WORK SECTION -->
 			<section
-				class="bg-work bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedWork rounded-2xl h-48 lg:h-full"
+				class="bg-work bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedWork rounded-2xl h-48 md:h-full"
 			>
 				<div
-					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
 				>
 					<div
-						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-semibold text-2xl">Work</h3>
+						<h3 class="font-medium text-lg">Work</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
-							class="h-2 lg:h-1"
+							class="h-2 md:h-1 cursor-pointer"
 						/>
 					</div>
 					<div
-						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">32hrs</h1>
-						<p class="text-paleBlue text-lg lg:text-base">Last week - 36hrs</p>
+						<h1 class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2">
+							32hrs
+						</h1>
+						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
+							Last week - 36hrs
+						</p>
 					</div>
 				</div>
 			</section>
 			<!-- PLAY SECTION -->
 			<section
-				class="bg-play bg-no-repeat bg-right-top flex flex-col justify-end bg-softBlue rounded-2xl h-48 lg:h-full"
+				class="bg-play bg-no-repeat bg-right-top flex flex-col justify-end bg-softBlue rounded-2xl h-48 md:h-full"
 			>
 				<div
-					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
 				>
 					<div
-						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-semibold text-2xl">Play</h3>
+						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Play</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
-							class="h-2 lg:h-1"
+							class="h-2 md:h-1 cursor-pointer"
 						/>
 					</div>
 					<div
-						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">10hrs</h1>
-						<p class="text-paleBlue text-lg lg:text-base">Last week - 8hrs</p>
+						<h1 class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2">
+							10hrs
+						</h1>
+						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
+							Last week - 8hrs
+						</p>
 					</div>
 				</div>
 			</section>
 			<!-- STUDY SECTION -->
 			<section
-				class="bg-study bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedStudy rounded-2xl h-48 lg:h-full"
+				class="bg-study bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedStudy rounded-2xl h-48 md:h-full"
 			>
 				<div
-					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
 				>
 					<div
-						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-semibold text-2xl">Study</h3>
+						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Study</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
-							class="h-2 lg:h-1"
+							class="h-2 md:h-1 cursor-pointer"
 						/>
 					</div>
 					<div
-						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">4hrs</h1>
-						<p class="text-paleBlue text-lg lg:text-base">Last week - 7hr</p>
+						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
+							4hrs
+						</h1>
+						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
+							Last week - 7hr
+						</p>
 					</div>
 				</div>
 			</section>
 			<!-- EXERCISE SECTION -->
 			<section
-				class="bg-exercise bg-no-repeat bg-right-top flex flex-col justify-end bg-limeGreen rounded-2xl h-48 lg:h-full"
+				class="bg-exercise bg-no-repeat bg-right-top flex flex-col justify-end bg-limeGreen rounded-2xl h-48 md:h-full"
 			>
 				<div
-					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
 				>
 					<div
-						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-semibold text-2xl">Exercise</h3>
+						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Exercise</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
-							class="h-2 lg:h-1"
+							class="h-2 md:h-1 cursor-pointer"
 						/>
 					</div>
 					<div
-						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">4hrs</h1>
-						<p class="text-paleBlue text-lg lg:text-base">Last week - 5hrs</p>
+						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
+							4hrs
+						</h1>
+						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
+							Last week - 5hrs
+						</p>
 					</div>
 				</div>
 			</section>
 			<!-- SOCIAL SECTION -->
 			<section
-				class="bg-social bg-no-repeat bg-right-top flex flex-col justify-end bg-violet rounded-2xl h-48 lg:h-full"
+				class="bg-social bg-no-repeat bg-right-top flex flex-col justify-end bg-violet rounded-2xl h-48 md:h-full"
 			>
 				<div
-					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
 				>
 					<div
-						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-semibold text-2xl">Social</h3>
+						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Social</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
-							class="h-2 lg:h-1"
+							class="h-2 md:h-1 cursor-pointer"
 						/>
 					</div>
 					<div
-						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">5hrs</h1>
-						<p class="text-paleBlue text-lg lg:text-base">Last week - 10hrs</p>
+						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
+							5hrs
+						</h1>
+						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
+							Last week - 10hrs
+						</p>
 					</div>
 				</div>
 			</section>
 			<!-- SELF CARE SECTION -->
 			<section
-				class="bg-selfCare bg-no-repeat bg-right-top flex flex-col justify-end bg-softOrange rounded-2xl h-48 lg:h-full"
+				class="bg-selfCare bg-no-repeat bg-right-top flex flex-col justify-end bg-softOrange rounded-2xl h-48 md:h-full"
 			>
 				<div
-					class="bg-darkBlue rounded-xl w-full flex flex-col gap-3 justify-center px-9 py-7 lg:p-8"
+					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
 				>
 					<div
-						class="flex justify-between place-items-baseline lg:place-items-center lg:mb-4"
+						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-semibold text-2xl">Work</h3>
+						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Work</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
-							class="h-2 lg:h-1"
+							class="h-2 md:h-1 cursor-pointer"
 						/>
 					</div>
 					<div
-						class="flex place-items-center lg:place-items-start justify-between lg:flex-col"
+						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl lg:text-6xl lg:mb-2">2hrs</h1>
-						<p class="text-paleBlue text-lg lg:text-base">Last week - 2hrs</p>
+						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
+							2hrs
+						</h1>
+						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
+							Last week - 2hrs
+						</p>
 					</div>
 				</div>
 			</section>
 		</main>
-		<!-- <div class="text-sm text-paleBlue">
+		<!-- <div class="col-start-1 col-end-5 text-sm text-paleBlue">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
 			Coded by Kadheryna.
