@@ -17,13 +17,14 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./styles/output.css" />
+
 		<title>Frontend Mentor | Time tracking dashboard</title>
 	</head>
 	<body
-		class="h-screen flex flex-col place-items-center justify-center bg-bgBody"
+		class="min-h-screen flex flex-col place-items-center justify-center bg-bgBody"
 	>
 		<main
-			class="h-full lg:max-w-[1200px] grid grid-cols-1 grid-rows-7 md:grid-cols-4 md:grid-rows-2 gap-7 md:gap-4 lg:gap-8 md:h-[490px] lg:h-[540px] max-w-[90vw] md:w-[95vw] mt-14"
+			class="h-full lg:max-w-[1200px] grid grid-cols-1 grid-rows-7 md:grid-cols-4 md:grid-rows-2 gap-7 md:gap-4 lg:gap-8 md:h-[490px] lg:h-[540px] max-w-[90vw] md:w-[95vw] mt-8"
 		>
 			<section class="md:row-span-2 bg-darkBlue rounded-2xl flex flex-col">
 				<div
@@ -46,18 +47,21 @@
 				>
 					<button
 						type="button"
+						id="daily-button"
 						class="font-light w-fit hover:text-paleBlue active:text-white"
 					>
 						Daily
 					</button>
 					<button
 						type="button"
+						id="weekly-button"
 						class="font-light md:my-5 w-fit hover:text-paleBlue active:text-white"
 					>
 						Weekly
 					</button>
 					<button
 						type="button"
+						id="monthly-button"
 						class="font-light w-fit hover:text-paleBlue active:text-white"
 					>
 						Monthly
@@ -84,12 +88,14 @@
 					<div
 						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2">
-							32hrs
-						</h1>
-						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
-							Last week - 36hrs
-						</p>
+						<h1
+							id="work-hours"
+							class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2"
+						></h1>
+						<p
+							id="previous-work"
+							class="text-paleBlue text-base md:text-sm lg:text-lg"
+						></p>
 					</div>
 				</div>
 			</section>
@@ -113,12 +119,14 @@
 					<div
 						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2">
-							10hrs
-						</h1>
-						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
-							Last week - 8hrs
-						</p>
+						<h1
+							id="play-hours"
+							class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2"
+						></h1>
+						<p
+							id="previous-play"
+							class="text-paleBlue text-base md:text-sm lg:text-lg"
+						></p>
 					</div>
 				</div>
 			</section>
@@ -142,12 +150,14 @@
 					<div
 						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
-							4hrs
-						</h1>
-						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
-							Last week - 7hr
-						</p>
+						<h1
+							id="study-hours"
+							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
+						></h1>
+						<p
+							id="previous-study"
+							class="text-paleBlue text-base md:text-sm lg:text-lg"
+						></p>
 					</div>
 				</div>
 			</section>
@@ -171,12 +181,14 @@
 					<div
 						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
-							4hrs
-						</h1>
-						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
-							Last week - 5hrs
-						</p>
+						<h1
+							id="exercise-hours"
+							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
+						></h1>
+						<p
+							id="previous-exercise"
+							class="text-paleBlue text-base md:text-sm lg:text-lg"
+						></p>
 					</div>
 				</div>
 			</section>
@@ -200,12 +212,14 @@
 					<div
 						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
-							5hrs
-						</h1>
-						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
-							Last week - 10hrs
-						</p>
+						<h1
+							id="social-hours"
+							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
+						></h1>
+						<p
+							id="previous-social"
+							class="text-paleBlue text-base md:text-sm lg:text-lg"
+						></p>
 					</div>
 				</div>
 			</section>
@@ -219,7 +233,9 @@
 					<div
 						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
 					>
-						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Work</h3>
+						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">
+							Self Care
+						</h3>
 						<img
 							src="./styles/images/icon-ellipsis.svg"
 							alt="ellipsis"
@@ -229,20 +245,23 @@
 					<div
 						class="flex place-items-center md:place-items-start justify-between md:flex-col"
 					>
-						<h1 class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2">
-							2hrs
-						</h1>
-						<p class="text-paleBlue text-base md:text-sm lg:text-lg">
-							Last week - 2hrs
-						</p>
+						<h1
+							id="selfCare-hours"
+							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
+						></h1>
+						<p
+							id="previous-selfCare"
+							class="text-paleBlue text-base md:text-sm lg:text-lg"
+						></p>
 					</div>
 				</div>
 			</section>
 		</main>
-		<!-- <div class="col-start-1 col-end-5 text-sm text-paleBlue">
+		<div class="col-start-1 col-end-5 text-sm text-paleBlue my-8">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
 			Coded by Kadheryna.
-		</div> -->
+		</div>
+		<script src="./app.js"></script>
 	</body>
 </html>
