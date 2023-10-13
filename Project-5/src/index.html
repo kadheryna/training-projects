@@ -1,267 +1,267 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./styles/images/favicon-32x32.png"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles/output.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./styles/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/output.css" />
 
-		<title>Frontend Mentor | Time tracking dashboard</title>
-	</head>
-	<body
-		class="min-h-screen flex flex-col place-items-center justify-center bg-bgBody"
-	>
-		<main
-			class="h-full lg:max-w-[1200px] grid grid-cols-1 grid-rows-7 md:grid-cols-4 md:grid-rows-2 gap-7 md:gap-4 lg:gap-8 md:h-[490px] lg:h-[540px] max-w-[90vw] md:w-[95vw] mt-8"
-		>
-			<section class="md:row-span-2 bg-darkBlue rounded-2xl flex flex-col">
-				<div
-					class="bg-bgPerson rounded-2xl flex place-items-center md:place-items-start md:flex-col p-8 md:p-8 md:pb-10"
-				>
-					<img
-						src="./styles/images/image-jeremy.png"
-						alt="Jeremy"
-						class="h-16 lg:h-20 border-white border-2 rounded-full mr-6"
-					/>
-					<div class="md:my-8">
-						<h3 class="font-normal text-sm md:text-base md:mb-2 text-paleBlue">
-							Report for
-						</h3>
-						<h1 class="text-2xl lg:text-4xl font-light">Jeremy Robson</h1>
-					</div>
-				</div>
-				<div
-					class="flex flex-row text-lg md:flex-col justify-around py-7 md:pl-8 md:pt-12 text-pastelBlue"
-				>
-					<button
-						type="button"
-						id="daily-button"
-						class="font-light w-fit hover:text-paleBlue active:text-white"
-					>
-						Daily
-					</button>
-					<button
-						type="button"
-						id="weekly-button"
-						class="font-light md:my-5 w-fit hover:text-paleBlue active:text-white"
-					>
-						Weekly
-					</button>
-					<button
-						type="button"
-						id="monthly-button"
-						class="font-light w-fit hover:text-paleBlue active:text-white"
-					>
-						Monthly
-					</button>
-				</div>
-			</section>
-			<!-- WORK SECTION -->
-			<section
-				class="bg-work bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedWork rounded-2xl h-48 md:h-full"
-			>
-				<div
-					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
-				>
-					<div
-						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
-					>
-						<h3 class="font-medium text-lg">Work</h3>
-						<img
-							src="./styles/images/icon-ellipsis.svg"
-							alt="ellipsis"
-							class="h-2 md:h-1 cursor-pointer"
-						/>
-					</div>
-					<div
-						class="flex place-items-center md:place-items-start justify-between md:flex-col"
-					>
-						<h1
-							id="work-hours"
-							class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2"
-						></h1>
-						<p
-							id="previous-work"
-							class="text-paleBlue text-base md:text-sm lg:text-lg"
-						></p>
-					</div>
-				</div>
-			</section>
-			<!-- PLAY SECTION -->
-			<section
-				class="bg-play bg-no-repeat bg-right-top flex flex-col justify-end bg-softBlue rounded-2xl h-48 md:h-full"
-			>
-				<div
-					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
-				>
-					<div
-						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
-					>
-						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Play</h3>
-						<img
-							src="./styles/images/icon-ellipsis.svg"
-							alt="ellipsis"
-							class="h-2 md:h-1 cursor-pointer"
-						/>
-					</div>
-					<div
-						class="flex place-items-center md:place-items-start justify-between md:flex-col"
-					>
-						<h1
-							id="play-hours"
-							class="font-light text-4xl md:text-4xl lg:text-5xl md:mb-2"
-						></h1>
-						<p
-							id="previous-play"
-							class="text-paleBlue text-base md:text-sm lg:text-lg"
-						></p>
-					</div>
-				</div>
-			</section>
-			<!-- STUDY SECTION -->
-			<section
-				class="bg-study bg-no-repeat bg-right-top flex flex-col justify-end bg-lightRedStudy rounded-2xl h-48 md:h-full"
-			>
-				<div
-					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
-				>
-					<div
-						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
-					>
-						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Study</h3>
-						<img
-							src="./styles/images/icon-ellipsis.svg"
-							alt="ellipsis"
-							class="h-2 md:h-1 cursor-pointer"
-						/>
-					</div>
-					<div
-						class="flex place-items-center md:place-items-start justify-between md:flex-col"
-					>
-						<h1
-							id="study-hours"
-							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
-						></h1>
-						<p
-							id="previous-study"
-							class="text-paleBlue text-base md:text-sm lg:text-lg"
-						></p>
-					</div>
-				</div>
-			</section>
-			<!-- EXERCISE SECTION -->
-			<section
-				class="bg-exercise bg-no-repeat bg-right-top flex flex-col justify-end bg-limeGreen rounded-2xl h-48 md:h-full"
-			>
-				<div
-					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
-				>
-					<div
-						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
-					>
-						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Exercise</h3>
-						<img
-							src="./styles/images/icon-ellipsis.svg"
-							alt="ellipsis"
-							class="h-2 md:h-1 cursor-pointer"
-						/>
-					</div>
-					<div
-						class="flex place-items-center md:place-items-start justify-between md:flex-col"
-					>
-						<h1
-							id="exercise-hours"
-							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
-						></h1>
-						<p
-							id="previous-exercise"
-							class="text-paleBlue text-base md:text-sm lg:text-lg"
-						></p>
-					</div>
-				</div>
-			</section>
-			<!-- SOCIAL SECTION -->
-			<section
-				class="bg-social bg-no-repeat bg-right-top flex flex-col justify-end bg-violet rounded-2xl h-48 md:h-full"
-			>
-				<div
-					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
-				>
-					<div
-						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
-					>
-						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">Social</h3>
-						<img
-							src="./styles/images/icon-ellipsis.svg"
-							alt="ellipsis"
-							class="h-2 md:h-1 cursor-pointer"
-						/>
-					</div>
-					<div
-						class="flex place-items-center md:place-items-start justify-between md:flex-col"
-					>
-						<h1
-							id="social-hours"
-							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
-						></h1>
-						<p
-							id="previous-social"
-							class="text-paleBlue text-base md:text-sm lg:text-lg"
-						></p>
-					</div>
-				</div>
-			</section>
-			<!-- SELF CARE SECTION -->
-			<section
-				class="bg-selfCare bg-no-repeat bg-right-top flex flex-col justify-end bg-softOrange rounded-2xl h-48 md:h-full"
-			>
-				<div
-					class="bg-darkBlue rounded-2xl flex flex-col justify-center gap-3 md:flex-col p-5 py-7 lg:px-8 lg:pt-8 lg:p-8 cursor-pointer hover:bg-darkPastelBlue"
-				>
-					<div
-						class="flex justify-between place-items-baseline md:place-items-center md:mb-4"
-					>
-						<h3 class="font-medium text-2xl md:text-xl lg:text-lg">
-							Self Care
-						</h3>
-						<img
-							src="./styles/images/icon-ellipsis.svg"
-							alt="ellipsis"
-							class="h-2 md:h-1 cursor-pointer"
-						/>
-					</div>
-					<div
-						class="flex place-items-center md:place-items-start justify-between md:flex-col"
-					>
-						<h1
-							id="selfCare-hours"
-							class="font-light text-5xl md:text-4xl lg:text-5xl md:mb-2"
-						></h1>
-						<p
-							id="previous-selfCare"
-							class="text-paleBlue text-base md:text-sm lg:text-lg"
-						></p>
-					</div>
-				</div>
-			</section>
-		</main>
-		<div class="col-start-1 col-end-5 text-sm text-paleBlue my-8">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-			Coded by Kadheryna.
-		</div>
-		<script src="./app.js"></script>
-	</body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body
+    class="flex min-h-screen flex-col place-items-center justify-center bg-bgBody"
+  >
+    <main
+      class="grid-rows-7 mt-8 grid h-full max-w-[90vw] grid-cols-1 gap-7 md:h-[490px] md:w-[95vw] md:grid-cols-4 md:grid-rows-2 md:gap-4 lg:h-[540px] lg:max-w-[1200px] lg:gap-8"
+    >
+      <section class="flex flex-col rounded-2xl bg-darkBlue md:row-span-2">
+        <div
+          class="flex place-items-center rounded-2xl bg-bgPerson p-8 md:flex-col md:place-items-start md:p-8 md:pb-10"
+        >
+          <img
+            src="./styles/images/image-jeremy.png"
+            alt="Jeremy"
+            class="mr-6 h-16 rounded-full border-2 border-white lg:h-20"
+          />
+          <div class="md:my-8">
+            <h3 class="text-sm font-normal text-paleBlue md:mb-2 md:text-base">
+              Report for
+            </h3>
+            <h1 class="text-2xl font-light lg:text-4xl">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div
+          class="flex flex-row justify-around py-7 text-lg text-pastelBlue md:flex-col md:pl-8 md:pt-12"
+        >
+          <button
+            type="button"
+            id="daily-button"
+            class="w-fit font-light hover:text-paleBlue active:text-white"
+          >
+            Daily
+          </button>
+          <button
+            type="button"
+            id="weekly-button"
+            class="w-fit font-light hover:text-paleBlue active:text-white md:my-5"
+          >
+            Weekly
+          </button>
+          <button
+            type="button"
+            id="monthly-button"
+            class="w-fit font-light hover:text-paleBlue active:text-white"
+          >
+            Monthly
+          </button>
+        </div>
+      </section>
+      <!-- WORK SECTION -->
+      <section
+        class="flex h-48 flex-col justify-end rounded-2xl bg-lightRedWork bg-work bg-right-top bg-no-repeat md:h-full"
+      >
+        <div
+          class="flex cursor-pointer flex-col justify-center gap-3 rounded-2xl bg-darkBlue p-5 py-7 hover:bg-darkPastelBlue md:flex-col lg:p-8 lg:px-8 lg:pt-8"
+        >
+          <div
+            class="flex place-items-baseline justify-between md:mb-4 md:place-items-center"
+          >
+            <h3 class="text-lg font-medium">Work</h3>
+            <img
+              src="./styles/images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="h-2 cursor-pointer md:h-1"
+            />
+          </div>
+          <div
+            class="flex place-items-center justify-between md:flex-col md:place-items-start"
+          >
+            <h1
+              id="work-hours"
+              class="text-4xl font-light md:mb-2 md:text-4xl lg:text-5xl"
+            ></h1>
+            <p
+              id="previous-work"
+              class="text-base text-paleBlue md:text-sm lg:text-lg"
+            ></p>
+          </div>
+        </div>
+      </section>
+      <!-- PLAY SECTION -->
+      <section
+        class="flex h-48 flex-col justify-end rounded-2xl bg-softBlue bg-play bg-right-top bg-no-repeat md:h-full"
+      >
+        <div
+          class="flex cursor-pointer flex-col justify-center gap-3 rounded-2xl bg-darkBlue p-5 py-7 hover:bg-darkPastelBlue md:flex-col lg:p-8 lg:px-8 lg:pt-8"
+        >
+          <div
+            class="flex place-items-baseline justify-between md:mb-4 md:place-items-center"
+          >
+            <h3 class="text-2xl font-medium md:text-xl lg:text-lg">Play</h3>
+            <img
+              src="./styles/images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="h-2 cursor-pointer md:h-1"
+            />
+          </div>
+          <div
+            class="flex place-items-center justify-between md:flex-col md:place-items-start"
+          >
+            <h1
+              id="play-hours"
+              class="text-4xl font-light md:mb-2 md:text-4xl lg:text-5xl"
+            ></h1>
+            <p
+              id="previous-play"
+              class="text-base text-paleBlue md:text-sm lg:text-lg"
+            ></p>
+          </div>
+        </div>
+      </section>
+      <!-- STUDY SECTION -->
+      <section
+        class="flex h-48 flex-col justify-end rounded-2xl bg-lightRedStudy bg-study bg-right-top bg-no-repeat md:h-full"
+      >
+        <div
+          class="flex cursor-pointer flex-col justify-center gap-3 rounded-2xl bg-darkBlue p-5 py-7 hover:bg-darkPastelBlue md:flex-col lg:p-8 lg:px-8 lg:pt-8"
+        >
+          <div
+            class="flex place-items-baseline justify-between md:mb-4 md:place-items-center"
+          >
+            <h3 class="text-2xl font-medium md:text-xl lg:text-lg">Study</h3>
+            <img
+              src="./styles/images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="h-2 cursor-pointer md:h-1"
+            />
+          </div>
+          <div
+            class="flex place-items-center justify-between md:flex-col md:place-items-start"
+          >
+            <h1
+              id="study-hours"
+              class="text-5xl font-light md:mb-2 md:text-4xl lg:text-5xl"
+            ></h1>
+            <p
+              id="previous-study"
+              class="text-base text-paleBlue md:text-sm lg:text-lg"
+            ></p>
+          </div>
+        </div>
+      </section>
+      <!-- EXERCISE SECTION -->
+      <section
+        class="flex h-48 flex-col justify-end rounded-2xl bg-limeGreen bg-exercise bg-right-top bg-no-repeat md:h-full"
+      >
+        <div
+          class="flex cursor-pointer flex-col justify-center gap-3 rounded-2xl bg-darkBlue p-5 py-7 hover:bg-darkPastelBlue md:flex-col lg:p-8 lg:px-8 lg:pt-8"
+        >
+          <div
+            class="flex place-items-baseline justify-between md:mb-4 md:place-items-center"
+          >
+            <h3 class="text-2xl font-medium md:text-xl lg:text-lg">Exercise</h3>
+            <img
+              src="./styles/images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="h-2 cursor-pointer md:h-1"
+            />
+          </div>
+          <div
+            class="flex place-items-center justify-between md:flex-col md:place-items-start"
+          >
+            <h1
+              id="exercise-hours"
+              class="text-5xl font-light md:mb-2 md:text-4xl lg:text-5xl"
+            ></h1>
+            <p
+              id="previous-exercise"
+              class="text-base text-paleBlue md:text-sm lg:text-lg"
+            ></p>
+          </div>
+        </div>
+      </section>
+      <!-- SOCIAL SECTION -->
+      <section
+        class="flex h-48 flex-col justify-end rounded-2xl bg-violet bg-social bg-right-top bg-no-repeat md:h-full"
+      >
+        <div
+          class="flex cursor-pointer flex-col justify-center gap-3 rounded-2xl bg-darkBlue p-5 py-7 hover:bg-darkPastelBlue md:flex-col lg:p-8 lg:px-8 lg:pt-8"
+        >
+          <div
+            class="flex place-items-baseline justify-between md:mb-4 md:place-items-center"
+          >
+            <h3 class="text-2xl font-medium md:text-xl lg:text-lg">Social</h3>
+            <img
+              src="./styles/images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="h-2 cursor-pointer md:h-1"
+            />
+          </div>
+          <div
+            class="flex place-items-center justify-between md:flex-col md:place-items-start"
+          >
+            <h1
+              id="social-hours"
+              class="text-5xl font-light md:mb-2 md:text-4xl lg:text-5xl"
+            ></h1>
+            <p
+              id="previous-social"
+              class="text-base text-paleBlue md:text-sm lg:text-lg"
+            ></p>
+          </div>
+        </div>
+      </section>
+      <!-- SELF CARE SECTION -->
+      <section
+        class="flex h-48 flex-col justify-end rounded-2xl bg-softOrange bg-selfCare bg-right-top bg-no-repeat md:h-full"
+      >
+        <div
+          class="flex cursor-pointer flex-col justify-center gap-3 rounded-2xl bg-darkBlue p-5 py-7 hover:bg-darkPastelBlue md:flex-col lg:p-8 lg:px-8 lg:pt-8"
+        >
+          <div
+            class="flex place-items-baseline justify-between md:mb-4 md:place-items-center"
+          >
+            <h3 class="text-2xl font-medium md:text-xl lg:text-lg">
+              Self Care
+            </h3>
+            <img
+              src="./styles/images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="h-2 cursor-pointer md:h-1"
+            />
+          </div>
+          <div
+            class="flex place-items-center justify-between md:flex-col md:place-items-start"
+          >
+            <h1
+              id="selfCare-hours"
+              class="text-5xl font-light md:mb-2 md:text-4xl lg:text-5xl"
+            ></h1>
+            <p
+              id="previous-selfCare"
+              class="text-base text-paleBlue md:text-sm lg:text-lg"
+            ></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="col-start-1 col-end-5 my-8 text-sm text-paleBlue">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by Kadheryna.
+    </div>
+    <script src="./app.js"></script>
+  </body>
 </html>
