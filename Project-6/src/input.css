@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  .instagram {
+    border-image-source: linear-gradient(
+      to right,
+      hsl(37, 97%, 70%),
+      hsl(329, 70%, 58%)
+    );
+    border-image-slice: 1;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 6px;
+  }
+}
