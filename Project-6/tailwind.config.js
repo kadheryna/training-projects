@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      darkMode: "class",
       colors: {
         // Primary
         limeGreen: "hsl(163, 72%, 41%)",
@@ -14,12 +15,14 @@ module.exports = {
         // Dark theme
         darkBackground: "hsl(230, 17%, 14%)",
         veryDarkBlue: "hsl(232, 19%, 15%)",
-        darkDesaturatedBlue: "sl(228, 28%, 20%)",
+        darkDesaturatedBlue: "hsl(228, 28%, 20%)",
         desaturatedBlue: "hsl(228, 34%, 66%)",
+        activeBlue: "hsl(228, 24%, 37%)",
         // Light theme
         veryPaleBlue: "hsl(225, 100%, 98%)",
+        grayishBlue: "hsl(232, 33%, 91%)",
         lightGrayishBlue: "hsl(227, 47%, 96%)",
-        darkGrayinshBlue: "hsl(228, 12%, 44%)",
+        darkGrayishBlue: "hsl(228, 12%, 34%)",
         darkBlue: "hsl(230, 17%, 14%)",
       },
       letterSpacing: {
@@ -31,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };
