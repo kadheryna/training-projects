@@ -6,6 +6,9 @@
   html {
     font-family: "Inter", sans-serif;
   }
+  body {
+    background: linear-gradient(top hsl(228, 12%, 44%), transparent);
+  }
 }
 
 @layer components {
@@ -20,5 +23,13 @@
     border-bottom: 0;
     border-right: 0;
     border-radius: 6px;
+  }
+
+  .slider {
+    background: linear-gradient(
+      to right,
+      hsl(163, 72%, 41%),
+      hsl(203, 89%, 53%)
+    );
   }
 }
