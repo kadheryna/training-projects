@@ -2,44 +2,41 @@ const currentResult = document.querySelector(".currentResult p");
 const previousResult = document.querySelector(".previousResult p");
 const numbersButtons = document.querySelectorAll(".number");
 const operatorsButtons = document.querySelectorAll(".operator");
+const resetButton = document.querySelector(".reset");
 const deleteButton = document.querySelector(".delete");
-const clearButton = document.querySelector(".clear");
 const equalButton = document.querySelector(".equal");
 const mathSign = document.querySelector(".mathSign");
 
 let result = "";
 
 function displayNumbers() {
-	if (this.textContent === "." && currentResult.innerHTML.includes(".")) return;
-	if (this.textContent === "." && currentResult.innerHTML === "")
-		return (currentResult.innerHTML = "0.");
+	if (this.textContent === "." && currentResult.innerText.includes(".")) return;
+	if (this.textContent === "." && currentResult.innerText === "")
+		return (currentResult.innerText = "0.");
 
-	currentResult.innerHTML += this.textContent;
+	currentResult.innerText += this.textContent;
 }
 
 function operate() {
-	if (currentResult.innerHTML === "" && this.textContent === "-") {
-		currentResult.innerHTML = "-";
-		return;
-	} else if (currentResult.innerHTML === "") {
+	if (currentResult.innerText === "") {
 		return;
 	}
 
-	if (mathSign.innerHTML !== "") {
+	if (mathSign.innerText !== "") {
 		showResult();
 	}
 
-	previousResult.innerHTML = currentResult.innerHTML;
-	mathSign.innerHTML = this.textContent;
-	currentResult.innerHTML = "";
+	previousResult.innerText = currentResult.innerText;
+	mathSign.innerText = this.textContent;
+	currentResult.innerText = "";
 }
 
 function showResult() {
-	if (previousResult.innerHTML === "" || currentResult.innerHTML === "") return;
+	if (previousResult.innerText === "" || currentResult.innerText === "") return;
 
-	let a = Number(currentResult.innerHTML);
-	let b = Number(previousResult.innerHTML);
-	let operator = mathSign.innerHTML;
+	let a = Number(currentResult.innerText);
+	let b = Number(previousResult.innerText);
+	let operator = mathSign.innerText;
 
 	switch (operator) {
 		case "+":
@@ -56,26 +53,27 @@ function showResult() {
 			break;
 	}
 
-	currentResult.innerHTML = result;
-	previousResult.innerHTML = "";
-	mathSign.innerHTML = "";
+	currentResult.innerText = result;
+	previousResult.innerText = "";
+	mathSign.innerText = "";
 }
 
 function clear() {
-	result = "";
-	currentResult.innerHTML = "";
-	previousResult.innerHTML = "";
-	operatorsButtons.innerHTML = "";
+	result.innerText = "";
+	currentResult.innerText = "";
+	previousResult.innerText = "";
+	operatorsButtons.innerText = "";
+	mathSign.innerText = "";
 }
 
 function deleteNumber() {
-	currentResult.innerHTML = currentResult.innerHTML.slice(0, -1);
+	currentResult.innerText = currentResult.innerText.slice(0, -1);
 }
 
 operatorsButtons.forEach(button => button.addEventListener("click", operate));
 equalButton.addEventListener("click", showResult);
-clearButton.addEventListener("click", clear);
+deleteButton.addEventListener("click", deleteNumber);
 numbersButtons.forEach(button =>
 	button.addEventListener("click", displayNumbers)
 );
-deleteButton.addEventListener("click", deleteNumber);
+resetButton.addEventListener("click", clear);
