@@ -606,6 +606,10 @@ input::-webkit-inner-spin-button {
   margin-bottom: 3rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -638,25 +642,36 @@ input::-webkit-inner-spin-button {
   height: 3rem;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.w-4\/5 {
-  width: 80%;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-\[3em\] {
   width: 3em;
 }
 
+.w-\[90vw\] {
+  width: 90vw;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-\[70vw\] {
+  width: 70vw;
+}
+
+.w-\[80vw\] {
+  width: 80vw;
+}
+
+.w-\[65vw\] {
+  width: 65vw;
+}
+
+.w-\[75vw\] {
+  width: 75vw;
 }
 
 .translate-x-1\/2 {
@@ -677,8 +692,8 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
 }
 
-.place-items-center {
-  place-items: center;
+.items-center {
+  align-items: center;
 }
 
 .justify-center {
@@ -759,10 +774,6 @@ input::-webkit-inner-spin-button {
   text-indent: 1rem;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -822,8 +833,38 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 640px) {
+  .sm\:w-\[70vw\] {
+    width: 70vw;
+  }
+
+  .sm\:w-\[0vw\] {
+    width: 0vw;
+  }
+
+  .sm\:w-\[60vw\] {
+    width: 60vw;
+  }
+
+  .sm\:w-\[80vw\] {
+    width: 80vw;
+  }
+
+  .sm\:w-\[65vw\] {
+    width: 65vw;
+  }
+
+  .sm\:w-\[75vw\] {
+    width: 75vw;
+  }
+
   .sm\:max-w-\[8em\] {
     max-width: 8em;
+  }
+
+  @media (min-width: 768px) {
+    .sm\:md\:max-w-xl {
+      max-width: 36rem;
+    }
   }
 }
 
@@ -849,6 +890,22 @@ input::-webkit-inner-spin-button {
     width: fit-content;
   }
 
+  .md\:w-\[60vw\] {
+    width: 60vw;
+  }
+
+  .md\:w-\[4em\] {
+    width: 4em;
+  }
+
+  .md\:w-\[70vw\] {
+    width: 70vw;
+  }
+
+  .md\:w-\[80vw\] {
+    width: 80vw;
+  }
+
   .md\:max-w-xl {
     max-width: 36rem;
   }
@@ -869,5 +926,15 @@ input::-webkit-inner-spin-button {
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-\[5em\] {
+    width: 5em;
+  }
+
+  .lg\:max-w-xl {
+    max-width: 36rem;
   }
 }
