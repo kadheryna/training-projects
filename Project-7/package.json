@@ -1,0 +1,15 @@
+{
+	"devDependencies": {
+		"autoprefixer": "^10.4.16",
+		"concurrently": "^8.2.2",
+		"live-server": "^1.1.0",
+		"postcss": "^8.4.31",
+		"postcss-cli": "^10.1.0",
+		"prettier": "^3.1.0",
+		"prettier-plugin-tailwindcss": "^0.5.7",
+		"tailwindcss": "^3.3.5"
+	},
+	"scripts": {
+		"watch": "postcss ./styles/input.css -o ./src/output.css --watch"
+	}
+}

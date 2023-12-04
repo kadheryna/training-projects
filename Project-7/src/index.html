@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./styles/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body
+    class="min-h-screen flex flex-col justify-center items-center bg-main font-spaceMono"
+  >
+    <header class="my-5">
+      <h1 class="text-2xl lg:text-3xl text-grayish tracking-widest">
+        SPLI<br />TTER
+      </h1>
+    </header>
+    <main
+      class="h-full bg-secondary grid sm:grid-cols-1 md:grid-cols-2 justify-between rounded-xl gap-6 px-8 py-12 sm:w-[70vw] md:w-[90vw] lg:max-w-[900px] mb-4"
+    >
+      <section class="flex flex-col justify-evenly gap-7">
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-row justify-between items-baseline">
+            <label for="bill" class="text-grayish lg:text-lg">Bill</label>
+            <span
+              id="wrongNumber"
+              class="text-warning text-xs invisible"
+            ></span>
+          </div>
+          <input
+            type="number"
+            id="bill"
+            class="correctData"
+            name="billNumber"
+            placeholder="0"
+          />
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-grayish lg:text-lg">Select Tip %</h2>
+          <div class="grid grid-cols-3 grid-rows-2 gap-2">
+            <button type="button" class="tip tipButton" value="5%">5%</button>
+            <button type="button" class="tip tipButton" value="10%">10%</button>
+            <button type="button" class="tip tipButton" value="15%">15%</button>
+            <button type="button" class="tip tipButton" value="25%">25%</button>
+            <button type="button" class="tip tipButton" value="50%">50%</button>
+            <input
+              type="number"
+              id="customTip"
+              class="customTip"
+              name="customTip"
+              placeholder="CUSTOM"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-row justify-between items-baseline">
+            <label for="peopleNumber" class="text-grayish lg:text-lg"
+              >Number of People</label
+            >
+            <span
+              id="wrongAmount"
+              class="text-warning text-xs invisible"
+            ></span>
+          </div>
+          <input
+            type="number"
+            id="people"
+            class="correctData"
+            name="peopleNumber"
+            placeholder="0"
+          />
+        </div>
+      </section>
+      <section
+        class="bg-darkGreen flex flex-col gap-8 rounded-xl justify-around p-8"
+      >
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <h2 class="text-white text-lg lg:text-xl">Tip Amount</h2>
+            <p class="mt-1 text-grayish text-sm lg:text-base">/ person</p>
+          </div>
+          <span id="tipTotal" class="text-lightGreen text-3xl">$0.00</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <h2 class="text-white text-lg lg:text-xl">Total</h2>
+            <p class="mt-1 text-grayish text-sm lg:text-base">/ person</p>
+          </div>
+          <span id="personTotal" class="text-lightGreen text-3xl">$0.00</span>
+        </div>
+        <button
+          type="button"
+          id="reset"
+          class="bg-lightGreen p-3 rounded-md text-darkGreen active:bg-buttonActive text-xl"
+        >
+          RESET
+        </button>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
