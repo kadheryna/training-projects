@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@layer components {
+  .correctData {
+    @apply text-right py-3 pr-3 rounded-md focus:outline-none border border-secondary focus:border-lightGreen text-darkGreen bg-input text-xl;
+  }
+
+  .invalidData {
+    @apply text-right py-3 pr-3 rounded-md focus:outline-none border border-warning focus:border-warning text-darkGreen bg-input text-xl;
+  }
+
+  .correctCustom {
+    @apply text-center rounded-md focus:outline-none border border-secondary focus:border-lightGreen text-darkGreen bg-input p-3 text-xl;
+  }
+
+  .invalidCustom {
+    @apply text-center rounded-md focus:outline-none border border-secondary focus:border-warning text-warning bg-input p-3;
+  }
+
+  .tip {
+    @apply bg-darkGreen p-3 rounded-md text-white active:bg-buttonActive text-lg lg:text-xl;
+  }
+
+  .customTip {
+    @apply text-center rounded-md focus:outline-none border border-secondary focus:border-lightGreen text-darkGreen bg-input p-3 text-lg lg:text-xl;
+  }
+}
