@@ -76,7 +76,7 @@ function calculate() {
   }
 }
 
-function reset() {
+function resetData() {
   personTotal.textContent = "$0.00";
   tipTotal.textContent = "$0.00";
   people.value = "";
@@ -88,7 +88,7 @@ bill.addEventListener("input", checkData);
 people.addEventListener("input", checkData);
 customTip.addEventListener("input", checkData);
 customTip.addEventListener("input", calculate);
-resetButton.addEventListener("click", reset);
+resetButton.addEventListener("click", resetData);
 tipButton.forEach((button) => button.addEventListener("click", calculate));
 
 function reset() {
