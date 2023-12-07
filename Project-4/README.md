@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live]([https://your-live-site-url.com](https://calm-sable-1d335b.netlify.app/))
+- Live Site URL: [Live](https://calm-sable-1d335b.netlify.app/)
 
 ### Built with
 
