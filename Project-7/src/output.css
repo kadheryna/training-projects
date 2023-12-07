@@ -584,11 +584,18 @@ video {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
 .mt-1 {
   margin-top: 0.25rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
 }
 .flex {
   display: flex;
@@ -643,6 +650,9 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.place-self-center {
+  place-self: center;
 }
 .rounded-md {
   border-radius: 0.375rem;
@@ -729,6 +739,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-lightGray {
+  --tw-text-opacity: 1;
+  color: hsl(186 14% 63% / var(--tw-text-opacity));
 }
 
 input::-webkit-outer-spin-button,
