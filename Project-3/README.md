@@ -21,11 +21,11 @@ Users should be able to:
 
 ### Screenshot
 
-
+<img width="1022" alt="image" src="https://github.com/kadheryna/training-projects/assets/72280779/94e82cfd-aa30-4a02-9a7d-182a450a1943">
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://charming-taiyaki-dbcd5a.netlify.app/)
+- Live Site URL: [Live](https://charming-taiyaki-dbcd5a.netlify.app/)
 
 ## My process
 
