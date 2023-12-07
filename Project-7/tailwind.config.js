@@ -10,8 +10,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        dollar: "url('./styles/images/icon-dollar.svg')",
-        person: "url('./styles/images/icon-person.svg')",
+        dollar: "url('../styles/images/icon-dollar.svg')",
+        person: "url('../styles/images/icon-person.svg')",
       },
       colors: {
         main: "hsl(185, 41%, 84%)",

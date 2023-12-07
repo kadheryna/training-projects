@@ -602,9 +602,6 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
-.w-\[80vw\] {
-  width: 80vw;
-}
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
