@@ -40,7 +40,7 @@ function checkCardNumber() {
 	}
 
 	wrongNumber.innerText = errorMessage;
-	wrongNumber.classList.toggle("invisible", errorMessage === "");
+	wrongNumber.classList.toggle("hidden", errorMessage === "");
 	inputNumber.classList.toggle("invalidInput", errorMessage !== "");
 
 	if (errorMessage === "") {
@@ -67,7 +67,7 @@ function checkName() {
 	}
 
 	wrongName.innerText = errorMessage;
-	wrongName.classList.toggle("invisible", isValid);
+	wrongName.classList.toggle("hidden", isValid);
 	inputName.classList.toggle("invalidInput", !isValid);
 
 	cardholderName.innerText = isValid ? userName.toUpperCase() : defaultName;
@@ -97,7 +97,7 @@ function checkMonth() {
 		isValid = false;
 	}
 
-	wrongDate.classList.toggle("invisible", isValid);
+	wrongDate.classList.toggle("hidden", isValid);
 	month.classList.toggle("invalidInput", !isValid);
 
 	cardMonth.innerText = isValid ? inputMonth.padStart(2, "0") : defaultMonth;
@@ -121,7 +121,7 @@ function checkYear() {
 		isValid = false;
 	}
 
-	wrongDate.classList.toggle("invisible", isValid);
+	wrongDate.classList.toggle("hidden", isValid);
 	year.classList.toggle("invalidInput", !isValid);
 
 	cardYear.innerText = isValid ? inputYear : defaultYear;
@@ -145,7 +145,7 @@ function checkCardCode() {
 		isValid = false;
 	}
 
-	wrongCode.classList.toggle("invisible", isValid);
+	wrongCode.classList.toggle("hidden", isValid);
 	codeCVC.classList.toggle("invalidInput", !isValid);
 
 	cardCVC.innerText = isValid ? inputCode.slice(0, 3) : defaultCode;

@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<main
-			class="h-full w-[100vw] flex flex-col place-items-center justify-start gap-[25%] md:flex-row max-w-[1400px]"
+			class="min-h-screen w-[100vw] flex flex-col place-items-center justify-start gap-[25%] md:flex-row max-w-[1400px]"
 		>
 			<section class="relative flex flex-col md:w-[35vw]">
 				<img
@@ -72,7 +72,7 @@
 						placeholder="e.g. Jane Appleseed"
 						class="correctInput"
 					/>
-					<p id="wrongName"class="invisible text-xs mt-2 text-warningRed"></p>
+					<p id="wrongName"class="hidden text-xs mt-2 text-warningRed"></p>
 				</div>
 				<div class="flex flex-col">
 					<label for="inputNumber" class="text-sm">CARD NUMBER</label>
@@ -83,7 +83,7 @@
 						placeholder="e.g. 1234 5678 9123 0000"
 						class="correctInput gap-2"
 					/>
-					<p id="wrongNumber" class=" invisible text-xs mt-2 text-warningRed"></p>
+					<p id="wrongNumber" class=" hidden text-xs mt-2 text-warningRed"></p>
 				</div>
 				<div class="flex gap-3">
 					<div class="flex flex-col">
@@ -107,7 +107,7 @@
 								class="correctInput"
 							/>
 						</div>
-						<p id="wrongDate" class="invisible text-xs mt-2 text-warningRed"></p>
+						<p id="wrongDate" class="hidden text-xs mt-2 text-warningRed"></p>
 					</div>
 					<div class="flex flex-col w-[100%]">
 						<label for="cvc" class="text-sm w-fit">CVC</label>
@@ -119,7 +119,7 @@
 							maxlength="3"
 							class="correctInput"
 						/>
-						<p id="wrongCode" class="invisible text-xs mt-2 text-warningRed"></p>
+						<p id="wrongCode" class="hidden text-xs mt-2 text-warningRed"></p>
 					</div>
 				</div>
 
@@ -140,7 +140,7 @@
 					</p>
 				</div>
 			</section>
-			<section id="complete" class="hidden flex flex-col place-items-center gap-6 mt-16 mb-5 w-[90%] md:w-[70%] lg:w-[40%] md:p-12">
+			<section id="complete" class="hidden flex-col place-items-center gap-6 mt-16 mb-5 w-[90%] md:w-[70%] lg:w-[40%] md:p-12">
 				<img src="./styles/images/icon-complete.svg" alt="complete" class="w-24"/>
 				<h1 class="text-4xl mt-5">Thank you!</h1>
 				<p class="text-darkGrayishViolet text-lg">We've added your card details</p>

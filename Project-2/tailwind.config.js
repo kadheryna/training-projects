@@ -3,7 +3,7 @@ module.exports = {
 	content: ["./src/**/*.{html,js}"],
 	theme: {
 		fontFamily: {
-			sans: ["League Spartan', sans-serif"],
+			sans: ["League Spartan", "sans-serif"],
 		},
 		extend: {
 			colors: {
