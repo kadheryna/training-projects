@@ -926,6 +926,7 @@ input::-webkit-inner-spin-button {
     gap: 2.5rem;
   }
 
+
   .md\:bg-bgDesktop {
     background-image: url('./images/bg-main-desktop.png');
   }
