@@ -26,10 +26,12 @@
   }
 
   .cardBack {
-    @apply flex justify-end text-white tracking-widest bg-cover bg-no-repeat rounded-md shadow-2xl w-[19rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] relative bottom-24 left-2 md:top-44 md:left-24 lg:left-36;
+
+    @apply flex justify-end text-white tracking-widest bg-cover bg-no-repeat rounded-md shadow-2xl w-[19rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] px-4 py-10 relative bottom-24 left-10 md:bottom-2 lg:bottom-9;
   }
 
   .cardFront {
-    @apply flex flex-col justify-between text-white rounded-md tracking-widest bg-cover bg-no-repeat p-5 lg:p-7 w-[18rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] shadow-2xl relative top-44 md:top-24 right-3 z-10 md:left-12 lg:left-24;
+    @apply flex flex-col justify-between text-white rounded-md tracking-widest bg-cover bg-no-repeat p-5 lg:p-7 w-[18rem] h-[10rem] md:scale-110 lg:w-[23rem] lg:h-[13rem] shadow-2xl relative top-44 right-2 z-10 md:top-[-5rem] ;
+
   }
 }

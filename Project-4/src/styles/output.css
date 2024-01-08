@@ -584,7 +584,9 @@ input::-webkit-inner-spin-button {
 .cardBack {
   position: relative;
   bottom: 6rem;
-  left: 0.5rem;
+
+  left: 2.5rem;
+
   display: flex;
   height: 10rem;
   width: 19rem;
@@ -602,8 +604,9 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .cardBack {
-    top: 11rem;
-    left: 6rem;
+
+    bottom: 0.5rem;
+
     --tw-scale-x: 1.1;
     --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -612,7 +615,7 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 1024px) {
   .cardBack {
-    left: 9rem;
+    bottom: 2.25rem;
     height: 13rem;
     width: 23rem;
   }
@@ -621,7 +624,7 @@ input::-webkit-inner-spin-button {
 .cardFront {
   position: relative;
   top: 11rem;
-  right: 0.75rem;
+  right: 0.5rem;
   z-index: 10;
   display: flex;
   height: 10rem;
@@ -642,8 +645,9 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 768px) {
   .cardFront {
-    top: 6rem;
-    left: 3rem;
+
+    top: -5rem;
+
     --tw-scale-x: 1.1;
     --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -652,7 +656,6 @@ input::-webkit-inner-spin-button {
 
 @media (min-width: 1024px) {
   .cardFront {
-    left: 6rem;
     height: 13rem;
     width: 23rem;
     padding: 1.75rem;
@@ -709,6 +712,10 @@ input::-webkit-inner-spin-button {
   margin-top: 1.25rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -746,8 +753,18 @@ input::-webkit-inner-spin-button {
   width: fit-content;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.max-w-\[1\] {
+  max-width: 1;
+}
+
+.max-w-\[1200px\] {
+  max-width: 1200px;
+
 }
 
 .grid-cols-2 {
@@ -766,6 +783,11 @@ input::-webkit-inner-spin-button {
   place-items: center;
 }
 
+.content-center {
+  align-content: center;
+}
+
+
 .items-center {
   align-items: center;
 }
@@ -778,10 +800,10 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
 }
 
+
 .gap-10 {
   gap: 2.5rem;
 }
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -811,21 +833,17 @@ input::-webkit-inner-spin-button {
   background-image: url('./images/bg-card-front.png');
 }
 
-.bg-bgDesktop {
-  background-image: url('./images/bg-main-desktop.png');
-}
 
-.bg-bgMobile {
-  background-image: url('./images/bg-main-mobile.png');
+.bg-\[length\:30\%_100\%\] {
+  background-size: 30% 100%;
+
 }
 
 .bg-cover {
   background-size: cover;
 }
 
-.bg-contain {
-  background-size: contain;
-}
+
 
 .bg-no-repeat {
   background-repeat: no-repeat;
@@ -897,13 +915,15 @@ input::-webkit-inner-spin-button {
   background-color: hsl(278 94% 30% / var(--tw-bg-opacity));
 }
 
-@media (min-width: 640px) {
-  .sm\:bg-bgMobile {
-    background-image: url('./images/bg-main-mobile.png');
+
+@media (min-width: 768px) {
+  .md\:w-\[45vw\] {
+    width: 45vw;
   }
 
-  .sm\:bg-cover {
-    background-size: cover;
+  .md\:w-\[50\%\] {
+    width: 50%;
+
   }
 }
 
@@ -913,29 +933,34 @@ input::-webkit-inner-spin-button {
     margin-right: 0.5rem;
   }
 
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 
-  .md\:h-\[100vh\] {
-    height: 100vh;
+  .md\:w-\[45\%\] {
+    width: 45%;
+
   }
 
   .md\:w-\[70\%\] {
     width: 70%;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+<
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .md\:gap-14 {
+    gap: 3.5rem;
+
   }
 
   .md\:bg-bgDesktop {
     background-image: url('./images/bg-main-desktop.png');
   }
 
-  .md\:bg-no-repeat {
-    background-repeat: no-repeat;
+
+  .md\:bg-none {
+    background-image: none;
+
   }
 
   .md\:p-12 {
@@ -951,6 +976,12 @@ input::-webkit-inner-spin-button {
   .lg\:top-\[5\.65rem\] {
     top: 5.65rem;
   }
+
+
+  .lg\:w-\[35\%\] {
+    width: 35%;
+  }
+
 
   .lg\:w-\[40\%\] {
     width: 40%;
