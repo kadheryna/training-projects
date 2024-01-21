@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,13 +24,12 @@
 
   <body>
     <main
-      class="min-h-screen flex flex-col content-center items-center md:bg-bgDesktop bg-[length:30%_100%] bg-no-repeat md:flex-row md:gap-10 max-w-[1200px]"
+      class="flex min-h-screen max-w-[1200px] flex-col content-center items-center bg-[length:30%_100%] bg-no-repeat md:flex-row md:gap-10 md:bg-bgDesktop"
     >
       <section
-        class="relative flex flex-col md:w-[45vw] h-[300px] w-[100vw] bg-bgMobile bg-cover md:bg-none "
-
+        class="relative flex h-[300px] w-[100vw] flex-col bg-bgMobile bg-cover md:w-[45vw] md:bg-none"
       >
-        <div class="relative flex flex-col items-center mx-auto">
+        <div class="relative mx-auto flex flex-col items-center">
           <div class="cardFront bg-cardFront">
             <div>
               <img
@@ -39,7 +38,7 @@
                 class="h-8"
               />
             </div>
-            <p id="cardNumber" class="text-lg lg:text-2xl tracking-widest">
+            <p id="cardNumber" class="text-lg tracking-widest lg:text-2xl">
               1234 5678 9123 0000
             </p>
             <div class="flex flex-row justify-between text-base">
@@ -57,7 +56,7 @@
             <div class="cardBack bg-cardBack">
               <p
                 id="cardCVC"
-                class="text-white w-fit text-xs lg:text-base absolute top-20 right-8 lg:top-[5.65rem]"
+                class="absolute right-8 top-20 w-fit text-xs text-white lg:top-[5.65rem] lg:text-base"
               >
                 000
               </p>
@@ -67,8 +66,7 @@
       </section>
       <section
         id="userData"
-        class="flex flex-col gap-6 mt-20 mb-5 w-[80%] md:w-[45%] md:p-8"
-
+        class="mb-5 mt-20 flex w-[80%] flex-col gap-6 md:w-[45%] md:p-8"
       >
         <div class="flex flex-col">
           <label for="inputName" class="text-sm">CARDHOLDER NAME</label>
@@ -79,7 +77,7 @@
             placeholder="e.g. Jane Appleseed"
             class="correctInput"
           />
-          <p id="wrongName" class="hidden text-xs mt-2 text-warningRed"></p>
+          <p id="wrongName" class="mt-2 hidden text-xs text-warningRed"></p>
         </div>
         <div class="flex flex-col">
           <label for="inputNumber" class="text-sm">CARD NUMBER</label>
@@ -90,7 +88,7 @@
             placeholder="e.g. 1234 5678 9123 0000"
             class="correctInput gap-2"
           />
-          <p id="wrongNumber" class="hidden text-xs mt-2 text-warningRed"></p>
+          <p id="wrongNumber" class="mt-2 hidden text-xs text-warningRed"></p>
         </div>
         <div class="flex gap-3">
           <div class="flex flex-col">
@@ -113,10 +111,10 @@
                 class="correctInput"
               />
             </div>
-            <p id="wrongDate" class="hidden text-xs mt-2 text-warningRed"></p>
+            <p id="wrongDate" class="mt-2 hidden text-xs text-warningRed"></p>
           </div>
-          <div class="flex flex-col w-[100%]">
-            <label for="cvc" class="text-sm w-fit">CVC</label>
+          <div class="flex w-[100%] flex-col">
+            <label for="cvc" class="w-fit text-sm">CVC</label>
             <input
               type="number"
               id="cvc"
@@ -125,18 +123,18 @@
               maxlength="3"
               class="correctInput"
             />
-            <p id="wrongCode" class="hidden text-xs mt-2 text-warningRed"></p>
+            <p id="wrongCode" class="mt-2 hidden text-xs text-warningRed"></p>
           </div>
         </div>
 
         <button
           type="button"
           id="confirmButton"
-          class="mt-3 text-grayishViolet p-4 rounded-md bg-darkViolet hover:bg-mediumViolet"
+          class="mt-3 rounded-md bg-darkViolet p-4 text-grayishViolet hover:bg-mediumViolet"
         >
           Confirm
         </button>
-        <div class="flex justify-center mt-4 text-center">
+        <div class="mt-4 flex justify-center text-center">
           <p class="text-center text-xs">
             Challenge by
             <a
@@ -148,21 +146,21 @@
       </section>
       <section
         id="complete"
-        class="hidden flex-col place-items-center gap-6 mt-16 mb-5 w-[90%] md:w-[70%] lg:w-[40%] md:p-12"
+        class="mb-5 mt-16 hidden w-[90%] flex-col place-items-center gap-6 md:w-[70%] md:p-12 lg:w-[40%]"
       >
         <img
           src="./styles/images/icon-complete.svg"
           alt="complete"
           class="w-24"
         />
-        <h1 class="text-4xl mt-5">Thank you!</h1>
-        <p class="text-darkGrayishViolet text-lg">
+        <h1 class="mt-5 text-4xl">Thank you!</h1>
+        <p class="text-lg text-darkGrayishViolet">
           We've added your card details
         </p>
         <button
           type="button"
           id="continueButton"
-          class="mt-3 text-grayishViolet w-[90%] p-4 rounded-md bg-darkViolet hover:bg-mediumViolet"
+          class="mt-3 w-[90%] rounded-md bg-darkViolet p-4 text-grayishViolet hover:bg-mediumViolet"
         >
           Continue
         </button>
