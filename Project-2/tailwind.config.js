@@ -27,7 +27,7 @@ module.exports = {
 				secondButtons: "hsl(45, 7%, 89%)",
 				secondEqual: "hsl(25, 98%, 40%)",
 				secondClear: "hsl(185, 42%, 37%)",
-				secondClearShadow: "hsl(185, 58%, 45%)",
+				secondClearActive: "hsl(185, 58%, 45%)",
 				secondClearShadow: "hsl(185, 58%, 25%)",
 				//////
 				thirdBackground: "hsl(268, 75%, 9%)",

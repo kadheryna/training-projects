@@ -7,6 +7,26 @@ const deleteButton = document.querySelector(".delete");
 const equalButton = document.querySelector(".equal");
 const mathSign = document.querySelector(".mathSign");
 
+const toggleBtns = document.querySelectorAll(".themeSwitcher div");
+
+toggleBtns.forEach(function(btn, index) {
+  btn.addEventListener('click', function() {
+    const body = document.body;
+
+    toggleBtns.forEach(function(toggleBtn, i) {
+      if (i === index) {
+        toggleBtn.classList.add("active");
+        toggleBtn.classList.remove("transparent");
+      } else {
+        toggleBtn.classList.remove("active");
+        toggleBtn.classList.add("transparent");
+      }
+    });
+
+    body.id = `theme${index + 1}`;
+  });
+});
+
 let result = "";
 
 function displayNumbers() {

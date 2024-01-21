@@ -1,0 +1,37 @@
+#theme2 {
+  background-color: theme(colors.secondBackground);
+
+  .themeSwitcher {
+    @apply flex h-6 w-20 items-center justify-evenly rounded-xl bg-secondButtonsBackground;
+  }
+
+   h1,h2, #themeNumbers {
+    @apply text-black;
+   }
+
+   .screen {
+    @apply mb-4 grid h-40 place-items-end overflow-hidden rounded-lg bg-secondScreen pb-4 pr-6 text-right text-[2.2rem] text-black md:text-[2.5rem];
+  }
+    .buttons {
+      @apply grid grid-cols-4 grid-rows-5 gap-3 rounded-lg bg-secondButtonsBackground p-6;
+
+      .number {
+        @apply cursor-pointer rounded-md border-b-2 border-firstButtonsShadow bg-secondButtons p-2 text-lg uppercase active:bg-firstButtonsActive;
+      }
+
+      .equal {
+        @apply cursor-pointer rounded-md border-b-2 border-firstEqualShadow bg-secondEqual p-2 text-lg uppercase text-black active:bg-firstEqualActive;
+      }
+
+      .delete {
+        @apply cursor-pointer rounded-md border-b-2 border-secondClearShadow bg-secondClear p-2 text-lg uppercase text-black active:bg-secondClearActive;
+      }
+
+      .reset {
+        @apply cursor-pointer rounded-md border-b-2 border-secondClearShadow bg-secondClear p-2 text-lg uppercase text-black active:bg-secondClearActive;
+      }
+
+      .operator {
+        @apply cursor-pointer rounded-md border-b-2 border-firstButtonsShadow bg-firstButtons p-2 text-lg uppercase active:bg-firstButtonsActive;
+      }
+    }}

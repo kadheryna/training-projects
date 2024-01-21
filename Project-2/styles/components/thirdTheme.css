@@ -1,0 +1,40 @@
+ #theme3 {
+
+  background-color: theme(colors.thirdBackground);
+
+.themeSwitcher {
+    @apply flex h-6 w-20 items-center justify-evenly rounded-xl bg-thirdScreen;
+  }
+
+  h1,h2, #themeNumbers {
+    @apply text-thirdText;
+   }
+
+ .screen {
+    @apply mb-4 grid h-40 place-items-end overflow-hidden rounded-lg bg-thirdScreen pb-4 pr-6 text-right text-[2.2rem] text-thirdText md:text-[2.5rem];
+  }
+
+    .buttons {
+      @apply grid grid-cols-4 grid-rows-5 gap-3 rounded-lg bg-thirdButtonsBackground p-6;
+    }
+
+      .number {
+        @apply cursor-pointer rounded-md border-b-2 border-thirdButtonsShadow bg-thirdButtons p-2 text-lg uppercase text-thirdText active:bg-thirdButtonsActive;
+      }
+
+      .equal {
+        @apply cursor-pointer rounded-md border-b-2 border-thirdEqualShadow bg-thirdEqual p-2 text-lg uppercase text-thirdText active:bg-thirdEqualActive;
+      }
+
+      .delete {
+        @apply cursor-pointer rounded-md border-b-2 border-thirdClearShadow bg-thirdClear p-2 text-lg uppercase text-thirdClearText active:bg-thirdClearActive;
+      }
+
+      .reset {
+        @apply cursor-pointer rounded-md border-b-2 border-thirdClearShadow bg-thirdClear p-2 text-lg uppercase text-thirdClearText active:bg-thirdClearActive;
+      }
+
+      .operator {
+        @apply cursor-pointer rounded-md border-b-2 border-thirdButtonsShadow bg-thirdButtons p-2 text-lg uppercase text-thirdText active:bg-thirdButtonsActive;
+      }
+    }

@@ -1,76 +1,77 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="./styles/output.css" />
-		<title>Project-2</title>
-	</head>
-	<body class="firstTheme">
-		<main class="w-[80vw] md:w-[60vw] lg:max-w-xl flex flex-col">
-			<section class="flex justify-between items-baseline h-10 mb-4 rounded-lg">
-				<h1 class="text-xl md:text-2xl text-white">calc</h1>
-				<div class="flex items-end">
-					<h2 class="text-md md:text-xl pr-5 text-white">THEME</h2>
-					<div class="flex flex-col">
-						<div class="flex justify-evenly flex-rows text-white">
-							<p>1</p>
-							<p>2</p>
-							<p>3</p>
-						</div>
-						<div
-							class="themeSwitcher"
-						>
-							<div class="w-4 h-4 rounded-xl toggleButton1 active"></div>
-							<div class="w-4 h-4 rounded-xl toggleButton2 transparent"></div>
-							<div class="w-4 h-4 rounded-xl toggleButton3 transparent"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="screen">
-				<div class="flex flex-row gap-2">
-					<div class="previousResult">
-						<p></p>
-					</div>
-					<div class="mathSign"></div>
-					<div class="currentResult"><p></p></div>
-				</div>
-			</section>
-			<section class="buttons">
-				<button type="button" class="number">7</button>
-				<button type="button" class="number">8</button>
-				<button type="button" class="number">9</button>
-				<button type="button" class="delete">del</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Project-2</title>
+  </head>
+  <body
+    id="theme1"
+    class="flex min-h-screen items-center justify-center bg-firstBackground font-semibold"
+  >
+    <main class="flex w-[80vw] flex-col md:w-[60vw] lg:max-w-xl">
+      <section class="mb-4 flex h-10 items-baseline justify-between rounded-lg">
+        <h1 class="text-xl text-white md:text-2xl">calc</h1>
+        <div class="flex items-end">
+          <h2 class="text-md pr-5 text-white md:text-xl">THEME</h2>
+          <div class="flex flex-col">
+            <div id="themeNumbers" class="flex-rows flex justify-evenly">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </div>
+            <div class="themeSwitcher">
+              <div class="toggleButton1 active h-4 w-4 rounded-xl"></div>
+              <div class="toggleButton2 transparent h-4 w-4 rounded-xl"></div>
+              <div class="toggleButton3 transparent h-4 w-4 rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="screen">
+        <div class="flex flex-row gap-2">
+          <div class="previousResult">
+            <p></p>
+          </div>
+          <div class="mathSign"></div>
+          <div class="currentResult"><p></p></div>
+        </div>
+      </section>
+      <section class="buttons">
+        <button type="button" class="number">7</button>
+        <button type="button" class="number">8</button>
+        <button type="button" class="number">9</button>
+        <button type="button" class="delete">del</button>
 
-				<button type="button" class="number">4</button>
-				<button type="button" class="number">5</button>
-				<button type="button" class="number">6</button>
-				<button type="button" class="operator">+</button>
+        <button type="button" class="number">4</button>
+        <button type="button" class="number">5</button>
+        <button type="button" class="number">6</button>
+        <button type="button" class="operator">+</button>
 
-				<button type="button" class="number">1</button>
-				<button type="button" class="number">2</button>
-				<button type="button" class="number">3</button>
-				<button type="button" class="operator">-</button>
+        <button type="button" class="number">1</button>
+        <button type="button" class="number">2</button>
+        <button type="button" class="number">3</button>
+        <button type="button" class="operator">-</button>
 
-				<button type="button" class="number">.</button>
-				<button type="button" class="number">0</button>
-				<button type="button" class="operator">/</button>
-				<button type="button" class="operator">x</button>
+        <button type="button" class="number">.</button>
+        <button type="button" class="number">0</button>
+        <button type="button" class="operator">/</button>
+        <button type="button" class="operator">x</button>
 
-				<button type="button" class="col-span-2 reset">reset</button>
-				<button type="button" class="col-span-2 equal">=</button>
-			</section>
-		</main>
-		<script src="index.js"></script>
-	</body>
+        <button type="button" class="reset col-span-2">reset</button>
+        <button type="button" class="equal col-span-2">=</button>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>

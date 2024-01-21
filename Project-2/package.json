@@ -1,13 +1,23 @@
 {
-  "name": "Project-2",
+	"name": "Project-2",
 	"source": "src/index.html",
 	"browserslist": "> 0.5%, last 2 versions, not dead",
 	"scripts": {
 		"start": "parcel --open",
-		"build": "parcel build"
+		"build": "parcel build",
+		"watch": "postcss ./styles/input.css -o ./src/output.css --watch"
 	},
-  "devDependencies": {
-    "parcel": "^2.9.3",
-    "tailwindcss": "^3.3.3"
-  }
+	"devDependencies": {
+		"autoprefixer": "^10.4.17",
+		"parcel": "^2.9.3",
+		"postcss": "^8.4.33",
+		"postcss-import": "^16.0.0",
+		"postcss-nesting": "^12.0.2",
+		"prettier": "3.2.4",
+		"tailwindcss": "^3.4.1"
+	},
+	"dependencies": {
+		"postcss-cli": "^11.0.0",
+		"prettier-plugin-tailwindcss": "^0.1.13"
+	}
 }

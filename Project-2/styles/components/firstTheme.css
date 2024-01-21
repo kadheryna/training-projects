@@ -1,0 +1,37 @@
+#theme1 {
+
+  .themeSwitcher {
+    @apply flex h-6 w-20 items-center justify-evenly rounded-xl bg-firstScreen;
+  }
+
+  #themeNumbers {
+    @apply text-white;
+  }
+  .screen {
+    @apply mb-4 grid h-40 place-items-end overflow-hidden rounded-lg bg-firstScreen pb-4 pr-6 text-right text-[2.2rem] text-white md:text-[2.5rem];
+  }
+
+  .buttons {
+    @apply grid grid-cols-4 grid-rows-5 gap-3 rounded-lg bg-firstButtonsBackground p-6;
+
+    .number {
+      @apply cursor-pointer rounded-md border-b-2 border-firstButtonsShadow bg-firstButtons p-2 text-lg uppercase active:bg-firstButtonsActive;
+    }
+
+    .equal {
+      @apply cursor-pointer rounded-md border-b-2 border-firstEqualShadow bg-firstEqual p-2 text-lg uppercase text-white active:bg-firstEqualActive;
+    }
+
+    .delete {
+      @apply cursor-pointer rounded-md border-b-2 border-firstClearShadow bg-firstClear p-2 text-lg uppercase text-white active:bg-firstClearActive;
+    }
+
+    .reset {
+      @apply cursor-pointer rounded-md border-b-2 border-firstClearShadow bg-firstClear p-2 text-lg uppercase text-white active:bg-firstClearActive;
+    }
+
+    .operator {
+      @apply cursor-pointer rounded-md border-b-2 border-firstButtonsShadow bg-firstButtons p-2 text-lg uppercase active:bg-firstButtonsActive;
+    }
+  }
+}
