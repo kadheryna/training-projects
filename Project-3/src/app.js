@@ -21,163 +21,144 @@ let currentMonth = date.getMonth() + 1;
 let currentYear = date.getFullYear();
 
 function checkDay() {
-	const day = Number(inputDay.value);
-	const month = Number(inputMonth.value);
-	const year = Number(inputYear.value);
-	const thirtyDaysMonths = [4, 6, 9, 11];
-	let isValidDay = true;
+  const day = Number(inputDay.value);
+  const month = Number(inputMonth.value);
+  const year = Number(inputYear.value);
+  const thirtyDaysMonths = [4, 6, 9, 11];
+  let isValidDay = true;
 
-	function checkLeapYear() {
-		if ((0 == year % 4 && 0 != year % 100) || 0 == year % 400) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+  function checkLeapYear() {
+    return (0 == year % 4 && 0 != year % 100) || 0 == year % 400;
+  }
 
-	if (day < 1 || day > 31) {
-		isValidDay = false;
-	} else if (thirtyDaysMonths.includes(month) && day > 30) {
-		isValidDay = false;
-	} else if (month === 2 && checkLeapYear(year)) {
-		if (day > 29) {
-			isValidDay = false;
-		}
-	} else if (month === 2 && !checkLeapYear(year)) {
-		if (day > 28) {
-			isValidDay = false;
-		}
-	}
+  if (
+    day < 1 ||
+    day > 31 ||
+    (thirtyDaysMonths.includes(month) && day > 30) ||
+    (month === 2 &&
+      ((checkLeapYear(year) && day > 29) || (!checkLeapYear(year) && day > 28)))
+  ) {
+    isValidDay = false;
+  }
 
-	if (!isValidDay) {
-		warningDay.innerText = "Must be a valid day";
-		warningDay.classList.remove("invisible");
-		inputDay.classList.add("invalidInput");
-		labelForDay.classList.add("text-warningRed");
-	} else {
-		warningDay.classList.add("invisible");
-		inputDay.classList.remove("invalidInput");
-		labelForDay.classList.remove("text-warningRed");
-	}
-	return day;
+  warningDay.innerText = "Must be a valid day";
+  warningDay.classList.toggle("invisible", isValidDay);
+  inputDay.classList.toggle("invalidInput", !isValidDay);
+  labelForDay.classList.toggle("text-warningRed", !isValidDay);
+
+  return day;
 }
 
 function checkMonth() {
-	const month = Number(inputMonth.value);
-	if (month < 1 || month >= 13) {
-		warningMonth.innerText = "Must be a valid month";
-		warningMonth.classList.remove("invisible");
-		inputMonth.classList.add("invalidInput");
-		labelForMonth.classList.add("text-warningRed");
-	} else {
-		warningMonth.classList.add("invisible");
-		inputMonth.classList.remove("invalidInput");
-		labelForMonth.classList.remove("text-warningRed");
-	}
-	return month;
+  const month = Number(inputMonth.value);
+  let isValidMonth = true;
+  if (month < 1 || month >= 13) isValidMonth = false;
+
+  warningMonth.innerText = "Must be a valid month";
+  warningMonth.classList.toggle("invisible", isValidMonth);
+  inputMonth.classList.toggle("invalidInput", !isValidMonth);
+  labelForMonth.classList.toggle("text-warningRed", !isValidMonth);
+
+  return month;
 }
 
 function checkYear() {
-	const year = Number(inputYear.value);
+  const year = Number(inputYear.value);
+  const isInvalidYear = year < 1936 && year < currentYear;
+  const isFutureYear = year > currentYear;
 
-	if (year < 1936 && year < currentYear) {
-		warningYear.innerText = "Must be a valid year";
-		warningYear.classList.remove("invisible");
-		inputYear.classList.add("invalidInput");
-		labelForYear.classList.add("text-warningRed");
-	} else if (year > currentYear) {
-		warningYear.innerText = "Must be in the past";
-		warningYear.classList.remove("invisible");
-		inputYear.classList.add("invalidInput");
-		labelForYear.classList.add("text-warningRed");
-	} else {
-		warningYear.classList.add("invisible");
-		inputYear.classList.remove("invalidInput");
-		labelForYear.classList.remove("text-warningRed");
-	}
-	return year;
+  warningYear.innerText = "Must be a valid year";
+  warningYear.classList.toggle("invisible", !isInvalidYear && !isFutureYear);
+  inputYear.classList.toggle("invalidInput", isInvalidYear || isFutureYear);
+  labelForYear.classList.toggle(
+    "text-warningRed",
+    isInvalidYear || isFutureYear,
+  );
+
+  return year;
 }
 
 function calculateAge() {
-	let userDay = Number(inputDay.value);
-	let userMonth = Number(inputMonth.value);
-	let userYear = Number(inputYear.value);
-	let userDate = new Date(`${userYear}-${userMonth}-${userDay}`);
+  let userDay = Number(inputDay.value);
+  let userMonth = Number(inputMonth.value);
+  let userYear = Number(inputYear.value);
+  let userDate = new Date(`${userYear}-${userMonth}-${userDay}`);
 
-	let differenceMs = date - userDate;
+  let differenceMs = date - userDate;
 
-	let milForDay = 24 * 60 * 60 * 1000;
-	let milForMonth = milForDay * 30.44;
-	let milForYear = milForDay * 365.25;
+  let milForDay = 24 * 60 * 60 * 1000;
+  let milForMonth = milForDay * 30.44;
+  let milForYear = milForDay * 365.25;
 
-	let years = Math.floor(differenceMs / milForYear);
-	differenceMs %= milForYear;
+  let years = Math.floor(differenceMs / milForYear);
+  differenceMs %= milForYear;
 
-	let months = Math.floor(differenceMs / milForMonth);
-	differenceMs %= milForMonth;
+  let months = Math.floor(differenceMs / milForMonth);
+  differenceMs %= milForMonth;
 
-	let days = Math.floor(differenceMs / milForDay);
+  let days = Math.floor(differenceMs / milForDay);
 
-	animateNumbers(years, months, days);
+  animateNumbers(years, months, days);
 }
 
 function animateNumbers(targetYears, targetMonths, targetDays) {
-	let currentYear = 0;
-	let currentMonth = 0;
-	let currentDay = 0;
+  let currentYear = 0;
+  let currentMonth = 0;
+  let currentDay = 0;
 
-	const interval = 50;
-	const stepYear = Math.ceil(targetYears / (1000 / interval));
-	const stepMonth = Math.ceil(targetMonths / (1000 / interval));
-	const stepDay = Math.ceil(targetDays / (1000 / interval));
+  const interval = 50;
+  const stepYear = Math.ceil(targetYears / (1000 / interval));
+  const stepMonth = Math.ceil(targetMonths / (1000 / interval));
+  const stepDay = Math.ceil(targetDays / (1000 / interval));
 
-	const yearInterval = setInterval(() => {
-		currentYear += stepYear;
-		if (currentYear >= targetYears) {
-			currentYear = targetYears;
-			clearInterval(yearInterval);
-		}
-		resultYears.innerHTML = currentYear;
-	}, interval);
+  const yearInterval = setInterval(() => {
+    currentYear += stepYear;
+    if (currentYear >= targetYears) {
+      currentYear = targetYears;
+      clearInterval(yearInterval);
+    }
+    resultYears.innerHTML = currentYear;
+  }, interval);
 
-	const monthInterval = setInterval(() => {
-		currentMonth += stepMonth;
-		if (currentMonth >= targetMonths) {
-			currentMonth = targetMonths;
-			clearInterval(monthInterval);
-		}
-		resultMonths.innerHTML = currentMonth;
-	}, interval);
+  const monthInterval = setInterval(() => {
+    currentMonth += stepMonth;
+    if (currentMonth >= targetMonths) {
+      currentMonth = targetMonths;
+      clearInterval(monthInterval);
+    }
+    resultMonths.innerHTML = currentMonth;
+  }, interval);
 
-	const dayInterval = setInterval(() => {
-		currentDay += stepDay;
-		if (currentDay >= targetDays) {
-			currentDay = targetDays;
-			clearInterval(dayInterval);
-		}
-		resultDays.innerHTML = currentDay;
-	}, interval);
+  const dayInterval = setInterval(() => {
+    currentDay += stepDay;
+    if (currentDay >= targetDays) {
+      currentDay = targetDays;
+      clearInterval(dayInterval);
+    }
+    resultDays.innerHTML = currentDay;
+  }, interval);
 }
 
 function calculateButton() {
-	let validDay = checkDay();
-	let validMonth = checkMonth();
-	let validYear = checkYear();
-	let errorMessage = "";
+  let validDay = checkDay();
+  let validMonth = checkMonth();
+  let validYear = checkYear();
+  let errorMessage = "This field is required";
 
-	if (!validDay && !validMonth && !validYear) {
-		errorMessage = "This field is required";
-		warningDay.innerText = errorMessage;
-		warningMonth.innerText = errorMessage;
-		warningYear.innerText = errorMessage;
-	} else if (!validDay || !validMonth || !validYear) {
-		errorMessage = "Must be a valid date";
-		warningDay.innerText = errorMessage;
-		warningMonth.innerText = errorMessage;
-		warningYear.innerText = errorMessage;
-	} else if (validDay && validMonth && validYear) {
-		calculateAge();
-	}
+  warningDay.innerText = !validDay ? errorMessage : "";
+  warningMonth.innerText = !validMonth ? errorMessage : "";
+  warningYear.innerText = !validYear ? errorMessage : "";
+
+  const isInvalidDate = !validDay || !validMonth || !validYear;
+
+  errorMessage = isInvalidDate ? "Must be a valid date" : "";
+  warningDay.classList.toggle("invisible", !isInvalidDate);
+  warningMonth.classList.toggle("invisible", !isInvalidDate);
+  warningYear.classList.toggle("invisible", !isInvalidDate);
+
+  if (!isInvalidDate) {
+    calculateAge();
+  }
 }
 
 inputDay.addEventListener("input", checkDay);
